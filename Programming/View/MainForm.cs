@@ -59,9 +59,23 @@ namespace Programming.View
         }
 
 
-        private void ValueIntTextBox_TextChanged(object sender, EventArgs e)
+        private void ParseButton_Click(object sender, EventArgs e)
         {
-
+            if (ParsingValueTextBox.Text == "") return;
+            //если ParsingValueTextBox пустой прекращение работы
+            string text = ParsingValueTextBox.Text;
+            var enumValues = Enum.GetValues(typeof(Weekday));
+          
+            foreach (var enumValue in enumValues)
+            {
+                if (text == enumValue.ToString())
+                {
+                    ParseLabel.Text = $"Это день недели ({enumValue} = {(int)Enum.Parse(typeof(Weekday), enumValue.ToString())}) ";
+                }
+                    
+            }
         }
+
+
     }
 }
