@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-public enum Season
+﻿namespace Programming.Model.Enums
 {
-    Winter,
-    Spring,
-    Summer,
-    Autumn,
+    public enum Season
+    {
+        Winter,
+        Spring,
+        Summer,
+        Autumn,
+    }
 }
+

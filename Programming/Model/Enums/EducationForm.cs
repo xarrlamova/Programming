@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-public enum EducationForm
+﻿namespace Programming.Model.Enums
 {
-    Fulltime,
-    Parttime,
-    Evening,
-    Remote
+    public enum EducationForm
+    {
+        Fulltime,
+        Parttime,
+        Evening,
+        Remote
+    }
 }
+

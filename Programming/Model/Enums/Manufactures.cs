@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-public enum Manufactures
+﻿namespace Programming.Model.Enums
 {
-    Samsung,
-    LG,
-    Sony,
-    Huawei,
-    Apple,
-    Google,
-    Lenovo
+    public enum Manufactures
+    {
+        Samsung,
+        LG,
+        Sony,
+        Huawei,
+        Apple,
+        Google,
+        Lenovo
+    }
 }
+

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Programming.Model.Enums;
 
 
 namespace Programming.View
@@ -17,7 +18,16 @@ namespace Programming.View
         {
             InitializeComponent();
 
-            object[] enums = new object[] { typeof(Color), typeof(EducationForm), typeof(Genre), typeof(Manufactures), typeof(Season), typeof(Weekday) };
+            object[] enums = new object[] 
+            {
+                typeof(Programming.Model.Enums.Color),
+                typeof(EducationForm),
+                typeof(Genre),
+                typeof(Manufactures),
+                typeof(Season),
+                typeof(Weekday)
+            };
+
             //создаем массив с названиями пееречислений
             AllEnumsListBox.Items.AddRange(enums); //передаем массив со значениями в AllEnumsListBox
         }
@@ -26,8 +36,6 @@ namespace Programming.View
         {
             var selectedEnum = (Type)AllEnumsListBox.Items[0];
             //выбранное значение по умолчанию - 0
-            var enumValues = Enum.GetValues(selectedEnum);
-            //массив со значениями перечисления
             foreach (var enumValue in Enum.GetValues(selectedEnum))
             {
                 EnumValuesListBox.Items.Add(enumValue);
@@ -74,7 +82,8 @@ namespace Programming.View
                 if (text == enumValue.ToString())
                 {
                     flag = true;
-                    ParseLabel.Text = $"Это день недели ({enumValue} = {(int)Enum.Parse(typeof(Weekday), enumValue.ToString())}) ";
+                    int IndexValue = (int)Enum.Parse(typeof(Weekday), enumValue.ToString());
+                    ParseLabel.Text = $"Это день недели ({enumValue} = {IndexValue}) ";
                 }
                     
             }
