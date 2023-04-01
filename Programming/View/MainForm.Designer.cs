@@ -34,9 +34,13 @@
             this.TableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.TableLayoutPanelChild = new System.Windows.Forms.TableLayoutPanel();
             this.WeekdayParsingGroupBox = new System.Windows.Forms.GroupBox();
+            this.ParseButton = new System.Windows.Forms.Button();
+            this.ParseLabel = new System.Windows.Forms.Label();
             this.ParsingValueTextBox = new System.Windows.Forms.TextBox();
             this.TypeValueForParsingLabel = new System.Windows.Forms.Label();
             this.SeasonHandleGroupBox = new System.Windows.Forms.GroupBox();
+            this.GoButton = new System.Windows.Forms.Button();
+            this.ChooseSeasonLabel = new System.Windows.Forms.Label();
             this.EnumerationsGroupBox = new System.Windows.Forms.GroupBox();
             this.ValueIntTextBox = new System.Windows.Forms.TextBox();
             this.IntValueLabel = new System.Windows.Forms.Label();
@@ -44,13 +48,13 @@
             this.EnumValuesListBox = new System.Windows.Forms.ListBox();
             this.ChooseEnumerationLabel = new System.Windows.Forms.Label();
             this.AllEnumsListBox = new System.Windows.Forms.ListBox();
-            this.ParseLabel = new System.Windows.Forms.Label();
-            this.ParseButton = new System.Windows.Forms.Button();
+            this.SeasonComboBox = new System.Windows.Forms.ComboBox();
             this.EnumsTabControl.SuspendLayout();
             this.EnumsTabPage.SuspendLayout();
             this.TableLayoutPanel.SuspendLayout();
             this.TableLayoutPanelChild.SuspendLayout();
             this.WeekdayParsingGroupBox.SuspendLayout();
+            this.SeasonHandleGroupBox.SuspendLayout();
             this.EnumerationsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,6 +126,27 @@
             this.WeekdayParsingGroupBox.TabStop = false;
             this.WeekdayParsingGroupBox.Text = "Weekday Parsing";
             // 
+            // ParseButton
+            // 
+            this.ParseButton.Location = new System.Drawing.Point(191, 49);
+            this.ParseButton.Name = "ParseButton";
+            this.ParseButton.Size = new System.Drawing.Size(75, 23);
+            this.ParseButton.TabIndex = 11;
+            this.ParseButton.Text = "Parse";
+            this.ParseButton.UseVisualStyleBackColor = true;
+            this.ParseButton.Click += new System.EventHandler(this.ParseButton_Click);
+            // 
+            // ParseLabel
+            // 
+            this.ParseLabel.AutoSize = true;
+            this.ParseLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ParseLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ParseLabel.Location = new System.Drawing.Point(17, 85);
+            this.ParseLabel.Name = "ParseLabel";
+            this.ParseLabel.Size = new System.Drawing.Size(120, 15);
+            this.ParseLabel.TabIndex = 10;
+            this.ParseLabel.Text = "Введите день недели";
+            // 
             // ParsingValueTextBox
             // 
             this.ParsingValueTextBox.Location = new System.Drawing.Point(17, 49);
@@ -140,6 +165,9 @@
             // 
             // SeasonHandleGroupBox
             // 
+            this.SeasonHandleGroupBox.Controls.Add(this.SeasonComboBox);
+            this.SeasonHandleGroupBox.Controls.Add(this.GoButton);
+            this.SeasonHandleGroupBox.Controls.Add(this.ChooseSeasonLabel);
             this.SeasonHandleGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SeasonHandleGroupBox.Location = new System.Drawing.Point(322, 3);
             this.SeasonHandleGroupBox.Name = "SeasonHandleGroupBox";
@@ -147,6 +175,25 @@
             this.SeasonHandleGroupBox.TabIndex = 1;
             this.SeasonHandleGroupBox.TabStop = false;
             this.SeasonHandleGroupBox.Text = "Season Handle";
+            // 
+            // GoButton
+            // 
+            this.GoButton.Location = new System.Drawing.Point(189, 49);
+            this.GoButton.Name = "GoButton";
+            this.GoButton.Size = new System.Drawing.Size(75, 23);
+            this.GoButton.TabIndex = 14;
+            this.GoButton.Text = "Go!";
+            this.GoButton.UseVisualStyleBackColor = true;
+            this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
+            // 
+            // ChooseSeasonLabel
+            // 
+            this.ChooseSeasonLabel.AutoSize = true;
+            this.ChooseSeasonLabel.Location = new System.Drawing.Point(15, 30);
+            this.ChooseSeasonLabel.Name = "ChooseSeasonLabel";
+            this.ChooseSeasonLabel.Size = new System.Drawing.Size(89, 15);
+            this.ChooseSeasonLabel.TabIndex = 13;
+            this.ChooseSeasonLabel.Text = "Choose season:";
             // 
             // EnumerationsGroupBox
             // 
@@ -224,26 +271,13 @@
             this.AllEnumsListBox.TabIndex = 0;
             this.AllEnumsListBox.SelectedIndexChanged += new System.EventHandler(this.AllEnumsListBox_SelectedIndexChanged);
             // 
-            // ParseLabel
+            // SeasonComboBox
             // 
-            this.ParseLabel.AutoSize = true;
-            this.ParseLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ParseLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ParseLabel.Location = new System.Drawing.Point(17, 85);
-            this.ParseLabel.Name = "ParseLabel";
-            this.ParseLabel.Size = new System.Drawing.Size(120, 15);
-            this.ParseLabel.TabIndex = 10;
-            this.ParseLabel.Text = "Введите день недели";
-            // 
-            // ParseButton
-            // 
-            this.ParseButton.Location = new System.Drawing.Point(191, 49);
-            this.ParseButton.Name = "ParseButton";
-            this.ParseButton.Size = new System.Drawing.Size(75, 23);
-            this.ParseButton.TabIndex = 11;
-            this.ParseButton.Text = "Parse";
-            this.ParseButton.UseVisualStyleBackColor = true;
-            this.ParseButton.Click += new System.EventHandler(this.ParseButton_Click);
+            this.SeasonComboBox.FormattingEnabled = true;
+            this.SeasonComboBox.Location = new System.Drawing.Point(15, 49);
+            this.SeasonComboBox.Name = "SeasonComboBox";
+            this.SeasonComboBox.Size = new System.Drawing.Size(168, 23);
+            this.SeasonComboBox.TabIndex = 15;
             // 
             // MainForm
             // 
@@ -261,6 +295,8 @@
             this.TableLayoutPanelChild.ResumeLayout(false);
             this.WeekdayParsingGroupBox.ResumeLayout(false);
             this.WeekdayParsingGroupBox.PerformLayout();
+            this.SeasonHandleGroupBox.ResumeLayout(false);
+            this.SeasonHandleGroupBox.PerformLayout();
             this.EnumerationsGroupBox.ResumeLayout(false);
             this.EnumerationsGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -286,5 +322,8 @@
         private Label TypeValueForParsingLabel;
         private Button ParseButton;
         private Label ParseLabel;
+        private Button GoButton;
+        private Label ChooseSeasonLabel;
+        private ComboBox SeasonComboBox;
     }
 }
