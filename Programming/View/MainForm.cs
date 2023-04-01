@@ -21,7 +21,19 @@ namespace Programming.View
             //создаем массив с названиями пееречислений
             AllEnumsListBox.Items.AddRange(enums); //передаем массив со значениями в AllEnumsListBox
         }
-
+        
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            var selectedEnum = (Type)AllEnumsListBox.Items[0];
+            //выбранное значение по умолчанию - 0
+            var enumValues = Enum.GetValues(selectedEnum);
+            //массив со значениями перечисления
+            foreach (var enumValue in Enum.GetValues(selectedEnum))
+            {
+                EnumValuesListBox.Items.Add(enumValue);
+            }
+            //добавляем значения в EnumValuesListBox
+        }
         private void AllEnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedEnum = (Type)AllEnumsListBox.SelectedItem;
@@ -40,20 +52,16 @@ namespace Programming.View
 
         private void EnumValuesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            var selectedEnum = (int)EnumValuesListBox.SelectedItem;
+            //выбранное значение - то, что кликнул пользователь
+            ValueIntTextBox.Text = selectedEnum.ToString();
+            //заносим числовое значение выбранного во втором списке в ValueTextBox
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+
+        private void ValueIntTextBox_TextChanged(object sender, EventArgs e)
         {
-            var selectedEnum = (Type)AllEnumsListBox.Items[0];
-            //выбранное значение по умолчанию - 0
-            var enumValues = Enum.GetValues(selectedEnum);
-            //массив со значениями перечисления
-            foreach (var enumValue in Enum.GetValues(selectedEnum))
-            {
-                EnumValuesListBox.Items.Add(enumValue);
-            }
-            //добавляем значения в EnumValuesListBox
+
         }
     }
 }

@@ -145,6 +145,7 @@
             this.ValueIntTextBox.Name = "ValueIntTextBox";
             this.ValueIntTextBox.Size = new System.Drawing.Size(136, 23);
             this.ValueIntTextBox.TabIndex = 0;
+            this.ValueIntTextBox.TextChanged += new System.EventHandler(this.ValueIntTextBox_TextChanged);
             // 
             // IntValueLabel
             // 
