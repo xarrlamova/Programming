@@ -24,6 +24,7 @@ namespace Programming.Model.Classes
             {
                 if (value < 1900 || value > 2023)
                     throw new ArgumentException("Год выпуска - от 1900 до 2023");
+                _yearOfRelease = value;
             }
         }
 
@@ -37,6 +38,7 @@ namespace Programming.Model.Classes
             {
                 if (value < 0 || value > 10)
                     throw new ArgumentException("Значение рейтинга должно быть от 0 до 10");
+                _rating = value;
             }
         }
     }
