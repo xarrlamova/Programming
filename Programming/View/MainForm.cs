@@ -20,7 +20,7 @@ namespace Programming.View
 
             object[] enums = new object[] 
             {
-                typeof(Programming.Model.Enums.Color),
+                typeof(Model.Enums.Color),
                 typeof(EducationForm),
                 typeof(Genre),
                 typeof(Manufactures),
@@ -28,7 +28,6 @@ namespace Programming.View
                 typeof(Weekday)
             };
 
-            //создаем массив с названиями пееречислений
             AllEnumsListBox.Items.AddRange(enums); //передаем массив со значениями в AllEnumsListBox
         }
         

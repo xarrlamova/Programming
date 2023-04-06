@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Model\Enums\Новая папка\**" />
+    <EmbeddedResource Remove="Model\Enums\Новая папка\**" />
+    <None Remove="Model\Enums\Новая папка\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="programming_50-50.ico" />
   </ItemGroup>
 
