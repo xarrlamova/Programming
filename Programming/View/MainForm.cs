@@ -30,6 +30,7 @@ namespace Programming.View
 
             //создаем массив с названиями пееречислений
             AllEnumsListBox.Items.AddRange(enums); //передаем массив со значениями в AllEnumsListBox
+            AllEnumsListBox.DisplayMember = nameof(Type.Name);
         }
         
         private void MainForm_Load(object sender, EventArgs e)
