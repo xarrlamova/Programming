@@ -29,6 +29,7 @@ namespace Programming.View
             };
 
             AllEnumsListBox.Items.AddRange(enums); //передаем массив со значениями в AllEnumsListBox
+            AllEnumsListBox.DisplayMember = nameof(Type.Name);
         }
         
         private void MainForm_Load(object sender, EventArgs e)
