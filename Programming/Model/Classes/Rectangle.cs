@@ -8,8 +8,36 @@ namespace Programming.Model.Classes
 {
     public class Rectangle
     {
-        double lenght;
-        double width;
-        string color;
+        private double _lenght;
+        private double _width;
+        public string Color { get; set; }
+
+        public double Lenght
+        {
+            get
+            {
+                return _lenght;
+            }
+            set
+            {
+                if (value <= 0)
+                    throw new ArgumentOutOfRangeException("Значение должно быть больше нуля");
+                _lenght = value;
+            }
+        }
+
+        public double Width
+        {
+            get
+            {
+                return _width;
+            }
+            set
+            {
+                if (value <= 0)
+                    throw new ArgumentOutOfRangeException("Значение должно быть больше нуля");
+                _width = value;
+            }
+        }
     }
 }

@@ -6,13 +6,25 @@ using System.Threading.Tasks;
 
 namespace Programming.Model.Classes
 {
-    internal class Film
+    public class Film
     {
-        public string Title;
-        public int DurationInMinutes;
+        public string Title { get; set; }
+        private int _durationInMinutes;
         private int _yearOfRelease;
-        public string Genre;
+        public string Genre { get; set; }
         private float _rating;
+
+
+        public int DurationInMinutes
+        {
+            get { return _durationInMinutes; }
+            set 
+            {
+                if (_durationInMinutes <= 0)
+                    throw new ArgumentException("Продолжительность в минутах должна быть больше нуля");
+                _durationInMinutes = value; 
+            }
+        }
 
         public int YearOfRelease
         {
@@ -27,6 +39,7 @@ namespace Programming.Model.Classes
                 _yearOfRelease = value;
             }
         }
+
 
         public float Rating
         {
