@@ -40,7 +40,6 @@ namespace Programming.Model.Classes
             }
         }
 
-
         public float Rating
         {
             get
@@ -54,5 +53,20 @@ namespace Programming.Model.Classes
                 _rating = value;
             }
         }
+
+        public Film()
+        {
+
+        }
+
+        public Film(string title, int durationInMinutes, int yearOfRelease, string genre, float rating)
+        {
+            Title = title;
+            DurationInMinutes = durationInMinutes;
+            YearOfRelease = yearOfRelease;
+            Genre = genre;
+            Rating = rating;
+        }
+
     }
 }

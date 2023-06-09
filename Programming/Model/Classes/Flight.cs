@@ -24,8 +24,18 @@ namespace Programming.Model.Classes
                 _flightTimeInMinutes = value;
             }
         }
+        
+        public Flight()
+        {
 
+        }
+
+        public Flight(int flightTimeInMinutes, string departurePoint, string destination)
+        {
+            FlightTimeInMinutes = flightTimeInMinutes;
+            DeparturePoint = departurePoint;
+            Destination = destination;
+        }
     } 
-
     
 }
