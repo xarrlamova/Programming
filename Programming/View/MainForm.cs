@@ -14,6 +14,9 @@ namespace Programming.View
 {
     public partial class MainForm : Form
     {
+        private Model.Classes.Rectangle[] _rectangles = new Model.Classes.Rectangle[5];
+        private Model.Classes.Rectangle _currentRectangle = new Model.Classes.Rectangle();
+       
         public MainForm()
         {
             InitializeComponent();
@@ -28,8 +31,20 @@ namespace Programming.View
                 typeof(Weekday)
             };
 
+            string[] colorNames = Enum.GetNames(typeof(Model.Enums.Color));
+
             AllEnumsListBox.Items.AddRange(enums); //передаем массив со значениями в AllEnumsListBox
             AllEnumsListBox.DisplayMember = nameof(Type.Name);
+
+            Random _rand = new Random();
+            for(int i = 0; i < _rectangles.Length; i++)
+            {
+                _rectangles[i] = new Model.Classes.Rectangle(Math.Round(_rand.NextDouble() * 100, 1),
+                    Math.Round(_rand.NextDouble() * 100, 1),
+                    colorNames[_rand.Next(0, colorNames.Length)], _rand.Next(1, 100),
+                    _rand.Next(1, 100));
+                RectanglesListBox.Items.Add($"Rectangle {i + 1}");
+            }
         }
         
         private void MainForm_Load(object sender, EventArgs e)
@@ -110,6 +125,72 @@ namespace Programming.View
                     break;
 
             }
+        }
+
+        private void RectanglesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int value = RectanglesListBox.SelectedIndex;
+            _currentRectangle = _rectangles[value];
+            RectWidthTextBox.Text = _currentRectangle.Width.ToString();
+            RectLengthTextBox.Text = _currentRectangle.Length.ToString();
+            RectColorTextBox.Text = _currentRectangle.Color.ToString();
+            RectLengthTextBox.TextChanged += RectLengthTextBox_TextChanged;
+            RectWidthTextBox.TextChanged += RectWidthTextBox_TextChanged;
+            RectColorTextBox.TextChanged += RectColorTextBox_TextChanged;
+        }
+
+        private void RectWidthTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double newWidth = Convert.ToDouble(RectWidthTextBox.Text);
+                _currentRectangle.Width = newWidth;
+                RectWidthTextBox.BackColor = System.Drawing.Color.White;
+            }
+            catch
+            {
+                RectWidthTextBox.BackColor = System.Drawing.Color.LightPink;
+            }
+        }
+
+        private void RectLengthTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double newLength = Convert.ToDouble(RectLengthTextBox.Text);
+                _currentRectangle.Length = newLength;
+                RectLengthTextBox.BackColor = System.Drawing.Color.White;
+            }
+            catch
+            {
+                RectLengthTextBox.BackColor = System.Drawing.Color.LightPink;
+            }
+        }
+
+        private void RectColorTextBox_TextChanged(object sender, EventArgs e)
+        {
+            _currentRectangle.Color = RectColorTextBox.Text;
+        }
+
+        private int FindRectangleWithMaxWidth()
+        {
+            double maxWidth = _rectangles[0].Width;
+            int maxWidthIndex = 0;
+
+            for (int i = 0; i < _rectangles.Length; i++)
+            {
+                if (_rectangles[i].Width > maxWidth)
+                {
+                    maxWidth = _rectangles[i].Width;
+                    maxWidthIndex = i;
+                }
+            }
+            return maxWidthIndex;
+        }
+
+        private void FindMaxWidthButton_Click(object sender, EventArgs e)
+        {
+            RectanglesListBox.SelectedIndex = FindRectangleWithMaxWidth();
         }
     }
 }
