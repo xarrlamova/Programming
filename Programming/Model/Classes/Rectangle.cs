@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Programming.Model.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,21 +9,21 @@ namespace Programming.Model.Classes
 {
     public class Rectangle
     {
-        private double _lenght;
+        private double _length;
         private double _width;
         public string Color { get; set; }
 
-        public double Lenght
+        public double Length
         {
             get
             {
-                return _lenght;
+                return _length;
             }
             set
             {
                 if (value <= 0)
                     throw new ArgumentOutOfRangeException("Значение должно быть больше нуля");
-                _lenght = value;
+                _length = value;
             }
         }
 
@@ -45,9 +46,9 @@ namespace Programming.Model.Classes
 
         }
 
-        public Rectangle(double lenght, double width, string color)
+        public Rectangle(double length, double width, string color, int x, int y)
         {
-            Lenght = lenght;
+            Length = length;
             Width = width;
             Color = color;
         }
