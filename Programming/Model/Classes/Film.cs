@@ -12,7 +12,7 @@ namespace Programming.Model.Classes
         private int _durationInMinutes;
         private int _yearOfRelease;
         public string Genre { get; set; }
-        private float _rating;
+        private double _rating;
 
 
         public int DurationInMinutes
@@ -20,7 +20,7 @@ namespace Programming.Model.Classes
             get { return _durationInMinutes; }
             set 
             {
-                if (_durationInMinutes <= 0)
+                if (_durationInMinutes < 0)
                     throw new ArgumentException("Продолжительность в минутах должна быть больше нуля");
                 _durationInMinutes = value; 
             }
@@ -40,7 +40,7 @@ namespace Programming.Model.Classes
             }
         }
 
-        public float Rating
+        public double Rating
         {
             get
             {
@@ -59,7 +59,7 @@ namespace Programming.Model.Classes
 
         }
 
-        public Film(string title, int durationInMinutes, int yearOfRelease, string genre, float rating)
+        public Film(string title, int durationInMinutes, int yearOfRelease, string genre, double rating)
         {
             Title = title;
             DurationInMinutes = durationInMinutes;
