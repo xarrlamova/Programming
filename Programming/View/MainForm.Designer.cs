@@ -65,6 +65,10 @@
             this.FilmNameTextBox = new System.Windows.Forms.TextBox();
             this.FilmsListBox = new System.Windows.Forms.ListBox();
             this.RectanglesGroupBox = new System.Windows.Forms.GroupBox();
+            this.Ylabel = new System.Windows.Forms.Label();
+            this.Xlabel = new System.Windows.Forms.Label();
+            this.RectYTextBox = new System.Windows.Forms.TextBox();
+            this.RectXTextBox = new System.Windows.Forms.TextBox();
             this.FindMaxWidthButton = new System.Windows.Forms.Button();
             this.ColorLabel = new System.Windows.Forms.Label();
             this.LengthLabel = new System.Windows.Forms.Label();
@@ -73,10 +77,8 @@
             this.RectLengthTextBox = new System.Windows.Forms.TextBox();
             this.RectWidthTextBox = new System.Windows.Forms.TextBox();
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
-            this.Ylabel = new System.Windows.Forms.Label();
-            this.Xlabel = new System.Windows.Forms.Label();
-            this.RectYTextBox = new System.Windows.Forms.TextBox();
-            this.RectXTextBox = new System.Windows.Forms.TextBox();
+            this.IDlabel = new System.Windows.Forms.Label();
+            this.RectIDTextBox = new System.Windows.Forms.TextBox();
             this.EnumsTabControl.SuspendLayout();
             this.EnumsTabPage.SuspendLayout();
             this.TableLayoutPanel.SuspendLayout();
@@ -484,6 +486,8 @@
             // 
             // RectanglesGroupBox
             // 
+            this.RectanglesGroupBox.Controls.Add(this.IDlabel);
+            this.RectanglesGroupBox.Controls.Add(this.RectIDTextBox);
             this.RectanglesGroupBox.Controls.Add(this.Ylabel);
             this.RectanglesGroupBox.Controls.Add(this.Xlabel);
             this.RectanglesGroupBox.Controls.Add(this.RectYTextBox);
@@ -506,12 +510,48 @@
             this.RectanglesGroupBox.TabStop = false;
             this.RectanglesGroupBox.Text = "Rectangles";
             // 
+            // Ylabel
+            // 
+            this.Ylabel.AutoSize = true;
+            this.Ylabel.Location = new System.Drawing.Point(208, 155);
+            this.Ylabel.Name = "Ylabel";
+            this.Ylabel.Size = new System.Drawing.Size(14, 15);
+            this.Ylabel.TabIndex = 16;
+            this.Ylabel.Text = "Y";
+            // 
+            // Xlabel
+            // 
+            this.Xlabel.AutoSize = true;
+            this.Xlabel.Location = new System.Drawing.Point(140, 155);
+            this.Xlabel.Name = "Xlabel";
+            this.Xlabel.Size = new System.Drawing.Size(14, 15);
+            this.Xlabel.TabIndex = 15;
+            this.Xlabel.Text = "X";
+            // 
+            // RectYTextBox
+            // 
+            this.RectYTextBox.Location = new System.Drawing.Point(208, 172);
+            this.RectYTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RectYTextBox.Name = "RectYTextBox";
+            this.RectYTextBox.ReadOnly = true;
+            this.RectYTextBox.Size = new System.Drawing.Size(62, 23);
+            this.RectYTextBox.TabIndex = 14;
+            // 
+            // RectXTextBox
+            // 
+            this.RectXTextBox.Location = new System.Drawing.Point(138, 172);
+            this.RectXTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RectXTextBox.Name = "RectXTextBox";
+            this.RectXTextBox.ReadOnly = true;
+            this.RectXTextBox.Size = new System.Drawing.Size(62, 23);
+            this.RectXTextBox.TabIndex = 13;
+            // 
             // FindMaxWidthButton
             // 
-            this.FindMaxWidthButton.Location = new System.Drawing.Point(140, 266);
+            this.FindMaxWidthButton.Location = new System.Drawing.Point(138, 266);
             this.FindMaxWidthButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FindMaxWidthButton.Name = "FindMaxWidthButton";
-            this.FindMaxWidthButton.Size = new System.Drawing.Size(129, 22);
+            this.FindMaxWidthButton.Size = new System.Drawing.Size(132, 22);
             this.FindMaxWidthButton.TabIndex = 7;
             this.FindMaxWidthButton.Text = "Find";
             this.FindMaxWidthButton.UseVisualStyleBackColor = true;
@@ -583,41 +623,23 @@
             this.RectanglesListBox.TabIndex = 0;
             this.RectanglesListBox.SelectedIndexChanged += new System.EventHandler(this.RectanglesListBox_SelectedIndexChanged);
             // 
-            // Ylabel
+            // IDlabel
             // 
-            this.Ylabel.AutoSize = true;
-            this.Ylabel.Location = new System.Drawing.Point(208, 155);
-            this.Ylabel.Name = "Ylabel";
-            this.Ylabel.Size = new System.Drawing.Size(14, 15);
-            this.Ylabel.TabIndex = 16;
-            this.Ylabel.Text = "Y";
+            this.IDlabel.AutoSize = true;
+            this.IDlabel.Location = new System.Drawing.Point(140, 201);
+            this.IDlabel.Name = "IDlabel";
+            this.IDlabel.Size = new System.Drawing.Size(18, 15);
+            this.IDlabel.TabIndex = 18;
+            this.IDlabel.Text = "ID";
             // 
-            // Xlabel
+            // RectIDTextBox
             // 
-            this.Xlabel.AutoSize = true;
-            this.Xlabel.Location = new System.Drawing.Point(140, 155);
-            this.Xlabel.Name = "Xlabel";
-            this.Xlabel.Size = new System.Drawing.Size(14, 15);
-            this.Xlabel.TabIndex = 15;
-            this.Xlabel.Text = "X";
-            // 
-            // RectYTextBox
-            // 
-            this.RectYTextBox.Location = new System.Drawing.Point(208, 172);
-            this.RectYTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.RectYTextBox.Name = "RectYTextBox";
-            this.RectYTextBox.ReadOnly = true;
-            this.RectYTextBox.Size = new System.Drawing.Size(62, 23);
-            this.RectYTextBox.TabIndex = 14;
-            // 
-            // RectXTextBox
-            // 
-            this.RectXTextBox.Location = new System.Drawing.Point(138, 172);
-            this.RectXTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.RectXTextBox.Name = "RectXTextBox";
-            this.RectXTextBox.ReadOnly = true;
-            this.RectXTextBox.Size = new System.Drawing.Size(62, 23);
-            this.RectXTextBox.TabIndex = 13;
+            this.RectIDTextBox.Location = new System.Drawing.Point(138, 217);
+            this.RectIDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RectIDTextBox.Name = "RectIDTextBox";
+            this.RectIDTextBox.ReadOnly = true;
+            this.RectIDTextBox.Size = new System.Drawing.Size(132, 23);
+            this.RectIDTextBox.TabIndex = 17;
             // 
             // MainForm
             // 
@@ -699,5 +721,7 @@
         private Label Xlabel;
         private TextBox RectYTextBox;
         private TextBox RectXTextBox;
+        private Label IDlabel;
+        private TextBox RectIDTextBox;
     }
 }
