@@ -11,6 +11,8 @@ namespace Programming.Model.Classes
     {
         private double _length;
         private double _width;
+
+        public Point2D Centre { get; set; }
         public string Color { get; set; }
 
         public double Length
@@ -44,11 +46,13 @@ namespace Programming.Model.Classes
 
         }
 
+
         public Rectangle(double length, double width, string color, int x, int y)
         {
             Length = length;
             Width = width;
             Color = color;
+            Centre = new Point2D(x, y);
         }
     }
 }

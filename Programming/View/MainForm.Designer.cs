@@ -73,6 +73,10 @@
             this.RectLengthTextBox = new System.Windows.Forms.TextBox();
             this.RectWidthTextBox = new System.Windows.Forms.TextBox();
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
+            this.Ylabel = new System.Windows.Forms.Label();
+            this.Xlabel = new System.Windows.Forms.Label();
+            this.RectYTextBox = new System.Windows.Forms.TextBox();
+            this.RectXTextBox = new System.Windows.Forms.TextBox();
             this.EnumsTabControl.SuspendLayout();
             this.EnumsTabPage.SuspendLayout();
             this.TableLayoutPanel.SuspendLayout();
@@ -480,6 +484,10 @@
             // 
             // RectanglesGroupBox
             // 
+            this.RectanglesGroupBox.Controls.Add(this.Ylabel);
+            this.RectanglesGroupBox.Controls.Add(this.Xlabel);
+            this.RectanglesGroupBox.Controls.Add(this.RectYTextBox);
+            this.RectanglesGroupBox.Controls.Add(this.RectXTextBox);
             this.RectanglesGroupBox.Controls.Add(this.FindMaxWidthButton);
             this.RectanglesGroupBox.Controls.Add(this.ColorLabel);
             this.RectanglesGroupBox.Controls.Add(this.LengthLabel);
@@ -575,6 +583,42 @@
             this.RectanglesListBox.TabIndex = 0;
             this.RectanglesListBox.SelectedIndexChanged += new System.EventHandler(this.RectanglesListBox_SelectedIndexChanged);
             // 
+            // Ylabel
+            // 
+            this.Ylabel.AutoSize = true;
+            this.Ylabel.Location = new System.Drawing.Point(208, 155);
+            this.Ylabel.Name = "Ylabel";
+            this.Ylabel.Size = new System.Drawing.Size(14, 15);
+            this.Ylabel.TabIndex = 16;
+            this.Ylabel.Text = "Y";
+            // 
+            // Xlabel
+            // 
+            this.Xlabel.AutoSize = true;
+            this.Xlabel.Location = new System.Drawing.Point(140, 155);
+            this.Xlabel.Name = "Xlabel";
+            this.Xlabel.Size = new System.Drawing.Size(14, 15);
+            this.Xlabel.TabIndex = 15;
+            this.Xlabel.Text = "X";
+            // 
+            // RectYTextBox
+            // 
+            this.RectYTextBox.Location = new System.Drawing.Point(208, 172);
+            this.RectYTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RectYTextBox.Name = "RectYTextBox";
+            this.RectYTextBox.ReadOnly = true;
+            this.RectYTextBox.Size = new System.Drawing.Size(62, 23);
+            this.RectYTextBox.TabIndex = 14;
+            // 
+            // RectXTextBox
+            // 
+            this.RectXTextBox.Location = new System.Drawing.Point(138, 172);
+            this.RectXTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RectXTextBox.Name = "RectXTextBox";
+            this.RectXTextBox.ReadOnly = true;
+            this.RectXTextBox.Size = new System.Drawing.Size(62, 23);
+            this.RectXTextBox.TabIndex = 13;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -651,5 +695,9 @@
         private TextBox FilmDurationTextBox;
         private TextBox FilmNameTextBox;
         private ListBox FilmsListBox;
+        private Label Ylabel;
+        private Label Xlabel;
+        private TextBox RectYTextBox;
+        private TextBox RectXTextBox;
     }
 }

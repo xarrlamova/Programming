@@ -145,6 +145,10 @@ namespace Programming.View
             RectWidthTextBox.Text = _currentRectangle.Width.ToString();
             RectLengthTextBox.Text = _currentRectangle.Length.ToString();
             RectColorTextBox.Text = _currentRectangle.Color.ToString();
+
+            RectXTextBox.Text = _currentRectangle.Centre.X.ToString();
+            RectYTextBox.Text = _currentRectangle.Centre.Y.ToString();
+
             RectLengthTextBox.TextChanged += RectLengthTextBox_TextChanged;
             RectWidthTextBox.TextChanged += RectWidthTextBox_TextChanged;
             RectColorTextBox.TextChanged += RectColorTextBox_TextChanged;
