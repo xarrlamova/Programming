@@ -41,19 +41,19 @@ namespace Programming.View
             AllEnumsListBox.Items.AddRange(enums); //передаем массив со значениями в AllEnumsListBox
             AllEnumsListBox.DisplayMember = nameof(Type.Name);
 
-            Random Rand = new Random();
+            Random rand = new Random();
             for(int i = 0; i < _rectangles.Length; i++)
             {
-                _rectangles[i] = new Model.Classes.Rectangle(Math.Round(Rand.NextDouble() * 100, 1),
-                    Math.Round(Rand.NextDouble() * 100, 1),
-                    colorNames[Rand.Next(0, colorNames.Length)], Rand.Next(1, 100),
-                    Rand.Next(1, 100));
+                _rectangles[i] = new Model.Classes.Rectangle(Math.Round(rand.NextDouble() * 100, 1),
+                    Math.Round(rand.NextDouble() * 100, 1),
+                    colorNames[rand.Next(0, colorNames.Length)], rand.Next(1, 100),
+                    rand.Next(1, 100));
                 RectanglesListBox.Items.Add($"Rectangle {i + 1}");
             }
             for (int i = 0; i < _films.Length; i++)
             {
-                _films[i] = new Film(filmNames[Rand.Next(1, filmNames.Length)], Rand.Next(300), Rand.Next(1900, 2023),
-                    filmGenres[Rand.Next(1, filmGenres.Length)], Math.Round(Rand.NextDouble() * 10, 1));
+                _films[i] = new Film(filmNames[rand.Next(1, filmNames.Length)], rand.Next(300), rand.Next(1900, 2023),
+                    filmGenres[rand.Next(1, filmGenres.Length)], Math.Round(rand.NextDouble() * 10, 1));
                 FilmsListBox.Items.Add($"Film {i + 1}");
             }
         }
@@ -108,8 +108,8 @@ namespace Programming.View
                 if (text == enumValue.ToString())
                 {
                     flag = true;
-                    int IndexValue = (int)Enum.Parse(typeof(Weekday), enumValue.ToString());
-                    ParseLabel.Text = $"Это день недели ({enumValue} = {IndexValue}) ";
+                    int indexValue = (int)Enum.Parse(typeof(Weekday), enumValue.ToString());
+                    ParseLabel.Text = $"Это день недели ({enumValue} = {indexValue}) ";
                 }
                     
             }
