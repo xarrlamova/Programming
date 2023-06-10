@@ -21,10 +21,10 @@ namespace Programming.Model.Classes
             get { return _number; }
             set 
             {
-                StackTrace stacktrace = new StackTrace();
                 if (Regex.IsMatch(value, "^((\\+7|7|8)+([0-9]){10})$") == false)
                 {
-                    throw new ArgumentException("value in number is suposed to contain only numbers and plus");
+                    throw new ArgumentException("value in number is supposed to contain only " +
+                        "numbers and plus");
                 }
                 _number = value;
             }
@@ -32,11 +32,10 @@ namespace Programming.Model.Classes
 
         private void AssertStringContainsOnlyNumbers(string value, string name)
         {
-            StackTrace stacktrace = new StackTrace();
             if (Regex.IsMatch(value, "^((\\+7|7|8)+([0-9]){10})$") == false)
             {
                 throw new ArgumentException($"value in {name} " +
-                    $"is suposed to contain only numbers and plus");
+                    $"is supposed to contain only numbers and plus");
             }
 
         }

@@ -21,7 +21,7 @@ namespace Programming.Model.Classes
             set 
             {
                 if (_durationInMinutes < 0)
-                    throw new ArgumentException("Продолжительность в минутах должна быть больше нуля");
+                    throw new ArgumentException("The duration in minutes must be greater than zero");
                 _durationInMinutes = value; 
             }
         }
@@ -49,7 +49,7 @@ namespace Programming.Model.Classes
             set
             {
                 if (value < 0 || value > 10)
-                    throw new ArgumentException("Значение рейтинга должно быть от 0 до 10");
+                    throw new ArgumentException("The rating value should be from 0 to 10");
                 _rating = value;
             }
         }

@@ -19,7 +19,7 @@ namespace Programming.Model.Classes
         {
             if (value < min || value > max)
                 throw new ArgumentException($"Exception is thrown:{name} value " +
-                    $"is suposed to be between {min} and {max}");
+                    $"is supposed to be between {min} and {max}");
         }
     }
 

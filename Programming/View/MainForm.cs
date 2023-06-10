@@ -41,19 +41,19 @@ namespace Programming.View
             AllEnumsListBox.Items.AddRange(enums); //передаем массив со значениями в AllEnumsListBox
             AllEnumsListBox.DisplayMember = nameof(Type.Name);
 
-            Random _rand = new Random();
+            Random Rand = new Random();
             for(int i = 0; i < _rectangles.Length; i++)
             {
-                _rectangles[i] = new Model.Classes.Rectangle(Math.Round(_rand.NextDouble() * 100, 1),
-                    Math.Round(_rand.NextDouble() * 100, 1),
-                    colorNames[_rand.Next(0, colorNames.Length)], _rand.Next(1, 100),
-                    _rand.Next(1, 100));
+                _rectangles[i] = new Model.Classes.Rectangle(Math.Round(Rand.NextDouble() * 100, 1),
+                    Math.Round(Rand.NextDouble() * 100, 1),
+                    colorNames[Rand.Next(0, colorNames.Length)], Rand.Next(1, 100),
+                    Rand.Next(1, 100));
                 RectanglesListBox.Items.Add($"Rectangle {i + 1}");
             }
             for (int i = 0; i < _films.Length; i++)
             {
-                _films[i] = new Film(filmNames[_rand.Next(1, filmNames.Length)], _rand.Next(300), _rand.Next(1900, 2023),
-                    filmGenres[_rand.Next(1, filmGenres.Length)], Math.Round(_rand.NextDouble() * 10, 1));
+                _films[i] = new Film(filmNames[Rand.Next(1, filmNames.Length)], Rand.Next(300), Rand.Next(1900, 2023),
+                    filmGenres[Rand.Next(1, filmGenres.Length)], Math.Round(Rand.NextDouble() * 10, 1));
                 FilmsListBox.Items.Add($"Film {i + 1}");
             }
         }

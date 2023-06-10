@@ -20,7 +20,7 @@ namespace Programming.Model.Classes
             set 
             {
                 if (value <= 0)
-                    throw new ArgumentException("Продолжительность в минутах должна быть больше нуля");
+                    throw new ArgumentException("The duration in minutes must be greater than zero");
                 _flightTimeInMinutes = value;
             }
         }

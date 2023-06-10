@@ -22,7 +22,7 @@ namespace Programming.Model.Classes
             set
             {
                 if (value <= 0)
-                    throw new ArgumentOutOfRangeException("Значение должно быть больше нуля");
+                    throw new ArgumentOutOfRangeException("The value must be greater than zero");
                 _length = value;
             }
         }
@@ -36,7 +36,7 @@ namespace Programming.Model.Classes
             set
             {
                 if (value <= 0)
-                    throw new ArgumentOutOfRangeException("Значение должно быть больше нуля");
+                    throw new ArgumentOutOfRangeException("The value must be greater than zero");
                 _width = value;
             }
         }
