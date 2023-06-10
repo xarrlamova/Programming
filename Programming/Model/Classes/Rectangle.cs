@@ -21,8 +21,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value <= 0)
-                    throw new ArgumentOutOfRangeException("The value must be greater than zero");
+                Validator.AssertOnPositiveValue(value, nameof(Length));
                 _length = value;
             }
         }
@@ -35,8 +34,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value <= 0)
-                    throw new ArgumentOutOfRangeException("The value must be greater than zero");
+                Validator.AssertOnPositiveValue(value, nameof(Width));
                 _width = value;
             }
         }

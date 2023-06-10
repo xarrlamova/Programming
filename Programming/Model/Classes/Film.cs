@@ -20,9 +20,8 @@ namespace Programming.Model.Classes
             get { return _durationInMinutes; }
             set 
             {
-                if (_durationInMinutes < 0)
-                    throw new ArgumentException("The duration in minutes must be greater than zero");
-                _durationInMinutes = value; 
+                Validator.AssertOnPositiveValue(value, nameof(DurationInMinutes));
+                _durationInMinutes = value;
             }
         }
 
@@ -34,8 +33,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value < 1900 || value > 2023)
-                    throw new ArgumentException("Год выпуска - от 1900 до 2023");
+                Validator.AssertValueInRange(value, 1900, DateTime.Now.Year, nameof(YearOfRelease));
                 _yearOfRelease = value;
             }
         }
@@ -48,8 +46,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value < 0 || value > 10)
-                    throw new ArgumentException("The rating value should be from 0 to 10");
+                Validator.AssertValueInRange(value, 0, 10, nameof(Rating));
                 _rating = value;
             }
         }

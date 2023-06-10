@@ -20,8 +20,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value < 0 || value > 23)
-                    throw new ArgumentOutOfRangeException("The value must be from a number from 0 to 23");
+                Validator.AssertValueInRange(value, 0, 23, nameof(Hours));
                 _hours = value;
             }
         }
@@ -34,8 +33,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value < 0 || value > 60)
-                    throw new ArgumentOutOfRangeException("The value must be from a number from 0 to 60");
+                Validator.AssertValueInRange(value, 0, 60, nameof(Minutes));
                 _minutes = value;
             }
         }
@@ -48,8 +46,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value < 0 || value > 60)
-                    throw new ArgumentOutOfRangeException("The value must be from a number from 0 to 60");
+                Validator.AssertValueInRange(value, 0, 60, nameof(Seconds));
                 _seconds = value;
             }
         }

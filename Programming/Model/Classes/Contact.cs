@@ -11,11 +11,40 @@ namespace Programming.Model.Classes
 {
     public class Contact
     {
+        private string _name;
+        private string _surname;
         private string _number;
 
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
-        
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                AssertStringContainsOnlyLetters(value, nameof(Name));
+                _name = value;
+            }
+        }
+        public string Surname
+        {
+            get => _surname;
+            set
+            {
+                AssertStringContainsOnlyLetters(value, nameof(Surname));
+                _surname = value;
+            }
+        }
+
+        private void AssertStringContainsOnlyLetters(string value, string name)
+        {
+            StackTrace stacktrace = new StackTrace();
+            if (Regex.IsMatch(value, "^[a-zA-Z]*$") == false)
+            {
+                throw new ArgumentException($"value in {name} " +
+                    $"is suposed to contain only letters");
+            }
+
+        }
+
         public string Number
         {
             get { return _number; }
@@ -30,23 +59,14 @@ namespace Programming.Model.Classes
             }
         }
 
-        private void AssertStringContainsOnlyNumbers(string value, string name)
-        {
-            if (Regex.IsMatch(value, "^((\\+7|7|8)+([0-9]){10})$") == false)
-            {
-                throw new ArgumentException($"value in {name} " +
-                    $"is supposed to contain only numbers and plus");
-            }
-
-        }
 
         public Contact()
         {
         }
-        public Contact(string firstname, string lastname, string number)
+        public Contact(string name, string surname, string number)
         {
-            Firstname = firstname;
-            Lastname = lastname;
+            Name = name;
+            Surname = surname;
             Number = number;
         }
     }

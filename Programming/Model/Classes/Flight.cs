@@ -19,8 +19,7 @@ namespace Programming.Model.Classes
             get { return _flightTimeInMinutes; }
             set 
             {
-                if (value <= 0)
-                    throw new ArgumentException("The duration in minutes must be greater than zero");
+                Validator.AssertOnPositiveValue(value, nameof(FlightTimeInMinutes));
                 _flightTimeInMinutes = value;
             }
         }
