@@ -164,31 +164,6 @@ namespace Programming.View
             }
         }
 
-        private void RectanglesListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int value = RectanglesListBox.SelectedIndex;
-            _currentRectangle = _rectangles[value];
-            RectWidthTextBox.Text = _currentRectangle.Width.ToString();
-            RectLengthTextBox.Text = _currentRectangle.Length.ToString();
-            RectColorTextBox.Text = _currentRectangle.Color.ToString();
-            RectLengthTextBox.TextChanged += RectLengthTextBox_TextChanged;
-            RectWidthTextBox.TextChanged += RectWidthTextBox_TextChanged;
-            RectColorTextBox.TextChanged += RectColorTextBox_TextChanged;
-        }
-
-        private void RectWidthTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                double newWidth = Convert.ToDouble(RectWidthTextBox.Text);
-                _currentRectangle.Width = newWidth;
-                RectWidthTextBox.BackColor = System.Drawing.Color.White;
-            }
-            catch
-            {
-                RectWidthTextBox.BackColor = System.Drawing.Color.LightPink;
-            }
-        }
 
         private void RectLengthTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -281,7 +256,7 @@ namespace Programming.View
                 _currentFilm.DurationInMinutes = newDuration;
                 FilmDurationTextBox.BackColor = System.Drawing.Color.White;
             }
-            catch (ArgumentException)
+            catch
             {
                 FilmDurationTextBox.BackColor = System.Drawing.Color.LightPink;
             }
