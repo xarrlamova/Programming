@@ -19,8 +19,4 @@
     <Content Include="programming_50-50.ico" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Model\Classes\Geometry\" />
-  </ItemGroup>
-
 </Project>

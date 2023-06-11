@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Programming.Model.Classes
+namespace Programming.Model.Classes.Geometry
 {
     public class Rectangle
     {
@@ -25,7 +25,7 @@ namespace Programming.Model.Classes
             }
         }
 
-        
+
         public double Length
         {
             get

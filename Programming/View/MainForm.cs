@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Programming.Model.Classes;
+using Programming.Model.Classes.Geometry;
 using Programming.Model.Enums;
 
 
@@ -15,12 +16,12 @@ namespace Programming.View
 {
     public partial class MainForm : Form
     {
-        private Model.Classes.Rectangle[] _rectangles = new Model.Classes.Rectangle[5];
-        private Model.Classes.Rectangle _currentRectangle = new Model.Classes.Rectangle();
+        private Model.Classes.Geometry.Rectangle[] _rectangles = new Model.Classes.Geometry.Rectangle[5];
+        private Model.Classes.Geometry.Rectangle _currentRectangle = new Model.Classes.Geometry.Rectangle();
         private Film[] _films = new Film[5];
         private Film _currentFilm = new Film();
 
-        private List<Model.Classes.Rectangle> _rectangels = new List<Model.Classes.Rectangle>();
+        private List<Model.Classes.Geometry.Rectangle> _rectangels = new List<Model.Classes.Geometry.Rectangle>();
         private List<Panel> _rectanglePanels = new List<Panel>();
 
         public MainForm()
@@ -47,7 +48,7 @@ namespace Programming.View
             Random rand = new Random();
             for(int i = 0; i < _rectangles.Length; i++)
             {
-                _rectangles[i] = new Model.Classes.Rectangle(Math.Round(rand.NextDouble() * 100, 1),
+                _rectangles[i] = new Model.Classes.Geometry.Rectangle(Math.Round(rand.NextDouble() * 100, 1),
                     Math.Round(rand.NextDouble() * 100, 1),
                     colorNames[rand.Next(0, colorNames.Length)], rand.Next(1, 100),
                     rand.Next(1, 100));
@@ -309,7 +310,7 @@ namespace Programming.View
         {
             int i = _rectangels.Count;
             Random rand = new Random();
-            _rectangels.Add(new Model.Classes.Rectangle(rand.Next(10, 200),
+            _rectangels.Add(new Model.Classes.Geometry.Rectangle(rand.Next(10, 200),
             rand.Next(10, 200),
             "Green", rand.Next(1, RectPanel.Size.Width - 5),
                     rand.Next(1, RectPanel.Size.Height - 5)));
@@ -359,7 +360,7 @@ namespace Programming.View
             }
         }
 
-        private void UpdateRectangleInfo(Model.Classes.Rectangle rectangle)
+        private void UpdateRectangleInfo(Model.Classes.Geometry.Rectangle rectangle)
         {
             XTextBox.Text = rectangle.Centre.X.ToString();
             YTextBox.Text = rectangle.Centre.Y.ToString();
@@ -500,7 +501,7 @@ namespace Programming.View
             }
         }
 
-        private void FindCollisions(List<Model.Classes.Rectangle> _rectangels)
+        private void FindCollisions(List<Model.Classes.Geometry.Rectangle> _rectangels)
         {
             var colidingPanelsColor = System.Drawing.Color.FromArgb(127, 255, 127, 127);
             var niceColor = System.Drawing.Color.FromArgb(127, 127, 255, 127);
