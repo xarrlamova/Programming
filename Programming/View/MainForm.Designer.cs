@@ -33,15 +33,11 @@
             this.EnumsTabPage = new System.Windows.Forms.TabPage();
             this.TableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.TableLayoutPanelChild = new System.Windows.Forms.TableLayoutPanel();
-            this.WeekdayParsingGroupBox = new System.Windows.Forms.GroupBox();
-            this.ParseButton = new System.Windows.Forms.Button();
-            this.ParseLabel = new System.Windows.Forms.Label();
-            this.ParsingValueTextBox = new System.Windows.Forms.TextBox();
-            this.TypeValueForParsingLabel = new System.Windows.Forms.Label();
             this.SeasonHandleGroupBox = new System.Windows.Forms.GroupBox();
             this.SeasonComboBox = new System.Windows.Forms.ComboBox();
             this.GoButton = new System.Windows.Forms.Button();
             this.ChooseSeasonLabel = new System.Windows.Forms.Label();
+            this.allEnumerationsControl1 = new Programming.View.Panels.AllEnumerationsControl();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
             this.TableLayoutPanelClasses = new System.Windows.Forms.TableLayoutPanel();
             this.FilmGroupBox = new System.Windows.Forms.GroupBox();
@@ -74,12 +70,11 @@
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
             this.RectanglesTabPage = new System.Windows.Forms.TabPage();
             this.rectanglesCollisionControl1 = new Programming.View.Panels.RectanglesCollisionControl();
-            this.allEnumerationsControl1 = new Programming.View.Panels.AllEnumerationsControl();
+            this.weekdayParsingControl1 = new Programming.View.Panels.WeekdayParsingControl();
             this.EnumsTabControl.SuspendLayout();
             this.EnumsTabPage.SuspendLayout();
             this.TableLayoutPanel.SuspendLayout();
             this.TableLayoutPanelChild.SuspendLayout();
-            this.WeekdayParsingGroupBox.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
             this.ClassesTabPage.SuspendLayout();
             this.TableLayoutPanelClasses.SuspendLayout();
@@ -115,43 +110,9 @@
             // TableLayoutPanelChild
             // 
             resources.ApplyResources(this.TableLayoutPanelChild, "TableLayoutPanelChild");
-            this.TableLayoutPanelChild.Controls.Add(this.WeekdayParsingGroupBox, 0, 0);
             this.TableLayoutPanelChild.Controls.Add(this.SeasonHandleGroupBox, 1, 0);
+            this.TableLayoutPanelChild.Controls.Add(this.weekdayParsingControl1, 0, 0);
             this.TableLayoutPanelChild.Name = "TableLayoutPanelChild";
-            // 
-            // WeekdayParsingGroupBox
-            // 
-            this.WeekdayParsingGroupBox.Controls.Add(this.ParseButton);
-            this.WeekdayParsingGroupBox.Controls.Add(this.ParseLabel);
-            this.WeekdayParsingGroupBox.Controls.Add(this.ParsingValueTextBox);
-            this.WeekdayParsingGroupBox.Controls.Add(this.TypeValueForParsingLabel);
-            resources.ApplyResources(this.WeekdayParsingGroupBox, "WeekdayParsingGroupBox");
-            this.WeekdayParsingGroupBox.Name = "WeekdayParsingGroupBox";
-            this.WeekdayParsingGroupBox.TabStop = false;
-            // 
-            // ParseButton
-            // 
-            resources.ApplyResources(this.ParseButton, "ParseButton");
-            this.ParseButton.Name = "ParseButton";
-            this.ParseButton.UseVisualStyleBackColor = true;
-            this.ParseButton.Click += new System.EventHandler(this.ParseButton_Click);
-            // 
-            // ParseLabel
-            // 
-            resources.ApplyResources(this.ParseLabel, "ParseLabel");
-            this.ParseLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ParseLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ParseLabel.Name = "ParseLabel";
-            // 
-            // ParsingValueTextBox
-            // 
-            resources.ApplyResources(this.ParsingValueTextBox, "ParsingValueTextBox");
-            this.ParsingValueTextBox.Name = "ParsingValueTextBox";
-            // 
-            // TypeValueForParsingLabel
-            // 
-            resources.ApplyResources(this.TypeValueForParsingLabel, "TypeValueForParsingLabel");
-            this.TypeValueForParsingLabel.Name = "TypeValueForParsingLabel";
             // 
             // SeasonHandleGroupBox
             // 
@@ -179,6 +140,11 @@
             // 
             resources.ApplyResources(this.ChooseSeasonLabel, "ChooseSeasonLabel");
             this.ChooseSeasonLabel.Name = "ChooseSeasonLabel";
+            // 
+            // allEnumerationsControl1
+            // 
+            resources.ApplyResources(this.allEnumerationsControl1, "allEnumerationsControl1");
+            this.allEnumerationsControl1.Name = "allEnumerationsControl1";
             // 
             // ClassesTabPage
             // 
@@ -393,10 +359,10 @@
             resources.ApplyResources(this.rectanglesCollisionControl1, "rectanglesCollisionControl1");
             this.rectanglesCollisionControl1.Name = "rectanglesCollisionControl1";
             // 
-            // allEnumerationsControl1
+            // weekdayParsingControl1
             // 
-            resources.ApplyResources(this.allEnumerationsControl1, "allEnumerationsControl1");
-            this.allEnumerationsControl1.Name = "allEnumerationsControl1";
+            resources.ApplyResources(this.weekdayParsingControl1, "weekdayParsingControl1");
+            this.weekdayParsingControl1.Name = "weekdayParsingControl1";
             // 
             // MainForm
             // 
@@ -408,8 +374,6 @@
             this.EnumsTabPage.ResumeLayout(false);
             this.TableLayoutPanel.ResumeLayout(false);
             this.TableLayoutPanelChild.ResumeLayout(false);
-            this.WeekdayParsingGroupBox.ResumeLayout(false);
-            this.WeekdayParsingGroupBox.PerformLayout();
             this.SeasonHandleGroupBox.ResumeLayout(false);
             this.SeasonHandleGroupBox.PerformLayout();
             this.ClassesTabPage.ResumeLayout(false);
@@ -429,12 +393,7 @@
         private TabPage EnumsTabPage;
         private TableLayoutPanel TableLayoutPanel;
         private TableLayoutPanel TableLayoutPanelChild;
-        private GroupBox WeekdayParsingGroupBox;
         private GroupBox SeasonHandleGroupBox;
-        private TextBox ParsingValueTextBox;
-        private Label TypeValueForParsingLabel;
-        private Button ParseButton;
-        private Label ParseLabel;
         private Button GoButton;
         private Label ChooseSeasonLabel;
         private ComboBox SeasonComboBox;
@@ -471,5 +430,6 @@
         private TabPage RectanglesTabPage;
         private Panels.RectanglesCollisionControl rectanglesCollisionControl1;
         private Panels.AllEnumerationsControl allEnumerationsControl1;
+        private Panels.WeekdayParsingControl weekdayParsingControl1;
     }
 }

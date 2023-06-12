@@ -58,28 +58,7 @@ namespace Programming.View
                 FilmsListBox.Items.Add($"Film {i + 1}");
             }
         }
-
-        private void ParseButton_Click(object sender, EventArgs e)
-        {
-            if (ParsingValueTextBox.Text == "") return;
-            //если ParsingValueTextBox пустой прекращение работы
-            string text = ParsingValueTextBox.Text;
-            var enumValues = Enum.GetValues(typeof(Weekday));
-
-            var flag = false;
-            foreach (var enumValue in enumValues)
-            {
-                if (text == enumValue.ToString())
-                {
-                    flag = true;
-                    int indexValue = (int)Enum.Parse(typeof(Weekday), enumValue.ToString());
-                    ParseLabel.Text = $"Это день недели ({enumValue} = {indexValue}) ";
-                }
-                    
-            }
-            if (!flag) ParseLabel.Text = "Нет такого дня недели";
-        }
-
+                
         private void GoButton_Click(object sender, EventArgs e)
         {
             switch (SeasonComboBox.Text)
