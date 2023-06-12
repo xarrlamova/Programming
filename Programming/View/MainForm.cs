@@ -233,5 +233,20 @@ namespace Programming.View
         {
 
         }
+
+        private void RectXTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RectYTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RectIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
