@@ -64,115 +64,16 @@
   <data name="TableLayoutPanelChild.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="SeasonComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 49</value>
-  </data>
-  <data name="SeasonComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 23</value>
-  </data>
-  <data name="SeasonComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;SeasonComboBox.Name" xml:space="preserve">
-    <value>SeasonComboBox</value>
-  </data>
-  <data name="&gt;&gt;SeasonComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SeasonComboBox.Parent" xml:space="preserve">
-    <value>SeasonHandleGroupBox</value>
-  </data>
-  <data name="&gt;&gt;SeasonComboBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GoButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 49</value>
-  </data>
-  <data name="GoButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="GoButton.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="GoButton.Text" xml:space="preserve">
-    <value>Go!</value>
-  </data>
-  <data name="&gt;&gt;GoButton.Name" xml:space="preserve">
-    <value>GoButton</value>
-  </data>
-  <data name="&gt;&gt;GoButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GoButton.Parent" xml:space="preserve">
-    <value>SeasonHandleGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GoButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ChooseSeasonLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ChooseSeasonLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 30</value>
-  </data>
-  <data name="ChooseSeasonLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 15</value>
-  </data>
-  <data name="ChooseSeasonLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="ChooseSeasonLabel.Text" xml:space="preserve">
-    <value>Choose season:</value>
-  </data>
-  <data name="&gt;&gt;ChooseSeasonLabel.Name" xml:space="preserve">
-    <value>ChooseSeasonLabel</value>
-  </data>
-  <data name="&gt;&gt;ChooseSeasonLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ChooseSeasonLabel.Parent" xml:space="preserve">
-    <value>SeasonHandleGroupBox</value>
-  </data>
-  <data name="&gt;&gt;ChooseSeasonLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="SeasonHandleGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SeasonHandleGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>371, 3</value>
-  </data>
-  <data name="SeasonHandleGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 197</value>
-  </data>
-  <data name="SeasonHandleGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="SeasonHandleGroupBox.Text" xml:space="preserve">
-    <value>Season Handle</value>
-  </data>
-  <data name="&gt;&gt;SeasonHandleGroupBox.Name" xml:space="preserve">
-    <value>SeasonHandleGroupBox</value>
-  </data>
-  <data name="&gt;&gt;SeasonHandleGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SeasonHandleGroupBox.Parent" xml:space="preserve">
-    <value>TableLayoutPanelChild</value>
-  </data>
-  <data name="&gt;&gt;SeasonHandleGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="weekdayParsingControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="weekdayParsingControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
   <data name="weekdayParsingControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 197</value>
+    <value>404, 220</value>
   </data>
   <data name="weekdayParsingControl1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -187,13 +88,37 @@
     <value>TableLayoutPanelChild</value>
   </data>
   <data name="&gt;&gt;weekdayParsingControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="seasonsControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="seasonsControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>413, 3</value>
+  </data>
+  <data name="seasonsControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>404, 220</value>
+  </data>
+  <data name="seasonsControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;seasonsControl1.Name" xml:space="preserve">
+    <value>seasonsControl1</value>
+  </data>
+  <data name="&gt;&gt;seasonsControl1.Type" xml:space="preserve">
+    <value>Programming.View.Panels.SeasonsControl, Programming, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;seasonsControl1.Parent" xml:space="preserve">
+    <value>TableLayoutPanelChild</value>
+  </data>
+  <data name="&gt;&gt;seasonsControl1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="TableLayoutPanelChild.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="TableLayoutPanelChild.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 202</value>
+    <value>0, 225</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TableLayoutPanelChild.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -203,7 +128,7 @@
     <value>1</value>
   </data>
   <data name="TableLayoutPanelChild.Size" type="System.Drawing.Size, System.Drawing">
-    <value>736, 203</value>
+    <value>820, 226</value>
   </data>
   <data name="TableLayoutPanelChild.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -221,7 +146,7 @@
     <value>0</value>
   </data>
   <data name="TableLayoutPanelChild.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="SeasonHandleGroupBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="weekdayParsingControl1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="weekdayParsingControl1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="seasonsControl1" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="allEnumerationsControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -230,7 +155,7 @@
     <value>3, 3</value>
   </data>
   <data name="allEnumerationsControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>730, 196</value>
+    <value>814, 219</value>
   </data>
   <data name="allEnumerationsControl1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -257,7 +182,7 @@
     <value>2</value>
   </data>
   <data name="TableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>736, 405</value>
+    <value>820, 451</value>
   </data>
   <data name="TableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -284,7 +209,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="EnumsTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>742, 411</value>
+    <value>826, 457</value>
   </data>
   <data name="EnumsTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1157,7 +1082,7 @@
     <value>0, 0</value>
   </data>
   <data name="EnumsTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>750, 439</value>
+    <value>834, 485</value>
   </data>
   <data name="EnumsTabControl.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1181,7 +1106,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>750, 439</value>
+    <value>834, 485</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

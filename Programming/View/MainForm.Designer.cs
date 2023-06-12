@@ -33,10 +33,7 @@
             this.EnumsTabPage = new System.Windows.Forms.TabPage();
             this.TableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.TableLayoutPanelChild = new System.Windows.Forms.TableLayoutPanel();
-            this.SeasonHandleGroupBox = new System.Windows.Forms.GroupBox();
-            this.SeasonComboBox = new System.Windows.Forms.ComboBox();
-            this.GoButton = new System.Windows.Forms.Button();
-            this.ChooseSeasonLabel = new System.Windows.Forms.Label();
+            this.weekdayParsingControl1 = new Programming.View.Panels.WeekdayParsingControl();
             this.allEnumerationsControl1 = new Programming.View.Panels.AllEnumerationsControl();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
             this.TableLayoutPanelClasses = new System.Windows.Forms.TableLayoutPanel();
@@ -70,12 +67,11 @@
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
             this.RectanglesTabPage = new System.Windows.Forms.TabPage();
             this.rectanglesCollisionControl1 = new Programming.View.Panels.RectanglesCollisionControl();
-            this.weekdayParsingControl1 = new Programming.View.Panels.WeekdayParsingControl();
+            this.seasonsControl1 = new Programming.View.Panels.SeasonsControl();
             this.EnumsTabControl.SuspendLayout();
             this.EnumsTabPage.SuspendLayout();
             this.TableLayoutPanel.SuspendLayout();
             this.TableLayoutPanelChild.SuspendLayout();
-            this.SeasonHandleGroupBox.SuspendLayout();
             this.ClassesTabPage.SuspendLayout();
             this.TableLayoutPanelClasses.SuspendLayout();
             this.FilmGroupBox.SuspendLayout();
@@ -110,36 +106,14 @@
             // TableLayoutPanelChild
             // 
             resources.ApplyResources(this.TableLayoutPanelChild, "TableLayoutPanelChild");
-            this.TableLayoutPanelChild.Controls.Add(this.SeasonHandleGroupBox, 1, 0);
             this.TableLayoutPanelChild.Controls.Add(this.weekdayParsingControl1, 0, 0);
+            this.TableLayoutPanelChild.Controls.Add(this.seasonsControl1, 1, 0);
             this.TableLayoutPanelChild.Name = "TableLayoutPanelChild";
             // 
-            // SeasonHandleGroupBox
+            // weekdayParsingControl1
             // 
-            this.SeasonHandleGroupBox.Controls.Add(this.SeasonComboBox);
-            this.SeasonHandleGroupBox.Controls.Add(this.GoButton);
-            this.SeasonHandleGroupBox.Controls.Add(this.ChooseSeasonLabel);
-            resources.ApplyResources(this.SeasonHandleGroupBox, "SeasonHandleGroupBox");
-            this.SeasonHandleGroupBox.Name = "SeasonHandleGroupBox";
-            this.SeasonHandleGroupBox.TabStop = false;
-            // 
-            // SeasonComboBox
-            // 
-            this.SeasonComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.SeasonComboBox, "SeasonComboBox");
-            this.SeasonComboBox.Name = "SeasonComboBox";
-            // 
-            // GoButton
-            // 
-            resources.ApplyResources(this.GoButton, "GoButton");
-            this.GoButton.Name = "GoButton";
-            this.GoButton.UseVisualStyleBackColor = true;
-            this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
-            // 
-            // ChooseSeasonLabel
-            // 
-            resources.ApplyResources(this.ChooseSeasonLabel, "ChooseSeasonLabel");
-            this.ChooseSeasonLabel.Name = "ChooseSeasonLabel";
+            resources.ApplyResources(this.weekdayParsingControl1, "weekdayParsingControl1");
+            this.weekdayParsingControl1.Name = "weekdayParsingControl1";
             // 
             // allEnumerationsControl1
             // 
@@ -359,10 +333,10 @@
             resources.ApplyResources(this.rectanglesCollisionControl1, "rectanglesCollisionControl1");
             this.rectanglesCollisionControl1.Name = "rectanglesCollisionControl1";
             // 
-            // weekdayParsingControl1
+            // seasonsControl1
             // 
-            resources.ApplyResources(this.weekdayParsingControl1, "weekdayParsingControl1");
-            this.weekdayParsingControl1.Name = "weekdayParsingControl1";
+            resources.ApplyResources(this.seasonsControl1, "seasonsControl1");
+            this.seasonsControl1.Name = "seasonsControl1";
             // 
             // MainForm
             // 
@@ -374,8 +348,6 @@
             this.EnumsTabPage.ResumeLayout(false);
             this.TableLayoutPanel.ResumeLayout(false);
             this.TableLayoutPanelChild.ResumeLayout(false);
-            this.SeasonHandleGroupBox.ResumeLayout(false);
-            this.SeasonHandleGroupBox.PerformLayout();
             this.ClassesTabPage.ResumeLayout(false);
             this.TableLayoutPanelClasses.ResumeLayout(false);
             this.FilmGroupBox.ResumeLayout(false);
@@ -393,10 +365,6 @@
         private TabPage EnumsTabPage;
         private TableLayoutPanel TableLayoutPanel;
         private TableLayoutPanel TableLayoutPanelChild;
-        private GroupBox SeasonHandleGroupBox;
-        private Button GoButton;
-        private Label ChooseSeasonLabel;
-        private ComboBox SeasonComboBox;
         private TabPage ClassesTabPage;
         private GroupBox RectanglesGroupBox;
         private Button FindMaxWidthButton;
@@ -431,5 +399,6 @@
         private Panels.RectanglesCollisionControl rectanglesCollisionControl1;
         private Panels.AllEnumerationsControl allEnumerationsControl1;
         private Panels.WeekdayParsingControl weekdayParsingControl1;
+        private Panels.SeasonsControl seasonsControl1;
     }
 }

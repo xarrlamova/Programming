@@ -58,28 +58,7 @@ namespace Programming.View
                 FilmsListBox.Items.Add($"Film {i + 1}");
             }
         }
-                
-        private void GoButton_Click(object sender, EventArgs e)
-        {
-            switch (SeasonComboBox.Text)
-            {
-                case "Spring":
-                    SeasonHandleGroupBox.BackColor = System.Drawing.Color.Green;
-                    break;
-                case "Summer":
-                    SeasonHandleGroupBox.BackColor = System.Drawing.Color.White;
-                    MessageBox.Show("Ура! Солнце!");
-                    break;
-                case "Autumn":
-                    SeasonHandleGroupBox.BackColor = System.Drawing.Color.Orange;
-                    break;
-                case "Winter":
-                    SeasonHandleGroupBox.BackColor = System.Drawing.Color.White;
-                    MessageBox.Show("Бррр! Холодно!");
-                    break;
-
-            }
-        }
+        
 
         private void RectanglesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -246,6 +225,11 @@ namespace Programming.View
         }
 
         private void ValueIntTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SeasonComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
