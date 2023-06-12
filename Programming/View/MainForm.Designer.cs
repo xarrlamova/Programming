@@ -33,7 +33,8 @@
             this.EnumsTabPage = new System.Windows.Forms.TabPage();
             this.TableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.TableLayoutPanelChild = new System.Windows.Forms.TableLayoutPanel();
-            this.weekdayParsingControl1 = new Programming.View.Panels.WeekdayParsingControl();
+            this.WeekdayParsingControl = new Programming.View.Panels.WeekdayParsingControl();
+            this.SeasonsControl = new Programming.View.Panels.SeasonsControl();
             this.allEnumerationsControl1 = new Programming.View.Panels.AllEnumerationsControl();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
             this.TableLayoutPanelClasses = new System.Windows.Forms.TableLayoutPanel();
@@ -50,24 +51,9 @@
             this.FilmDurationTextBox = new System.Windows.Forms.TextBox();
             this.FilmNameTextBox = new System.Windows.Forms.TextBox();
             this.FilmsListBox = new System.Windows.Forms.ListBox();
-            this.RectanglesGroupBox = new System.Windows.Forms.GroupBox();
-            this.IDlabel = new System.Windows.Forms.Label();
-            this.RectIDTextBox = new System.Windows.Forms.TextBox();
-            this.Ylabel = new System.Windows.Forms.Label();
-            this.Xlabel = new System.Windows.Forms.Label();
-            this.RectYTextBox = new System.Windows.Forms.TextBox();
-            this.RectXTextBox = new System.Windows.Forms.TextBox();
-            this.FindMaxWidthButton = new System.Windows.Forms.Button();
-            this.ColorLabel = new System.Windows.Forms.Label();
-            this.LengthLabel = new System.Windows.Forms.Label();
-            this.RectWidthLabel = new System.Windows.Forms.Label();
-            this.RectColorTextBox = new System.Windows.Forms.TextBox();
-            this.RectLengthTextBox = new System.Windows.Forms.TextBox();
-            this.RectWidthTextBox = new System.Windows.Forms.TextBox();
-            this.RectanglesListBox = new System.Windows.Forms.ListBox();
             this.RectanglesTabPage = new System.Windows.Forms.TabPage();
-            this.rectanglesCollisionControl1 = new Programming.View.Panels.RectanglesCollisionControl();
-            this.seasonsControl1 = new Programming.View.Panels.SeasonsControl();
+            this.RectanglesCollisionControl = new Programming.View.Panels.RectanglesCollisionControl();
+            this.RectanglesControl = new Programming.View.Panels.RectanglesControl();
             this.EnumsTabControl.SuspendLayout();
             this.EnumsTabPage.SuspendLayout();
             this.TableLayoutPanel.SuspendLayout();
@@ -75,7 +61,6 @@
             this.ClassesTabPage.SuspendLayout();
             this.TableLayoutPanelClasses.SuspendLayout();
             this.FilmGroupBox.SuspendLayout();
-            this.RectanglesGroupBox.SuspendLayout();
             this.RectanglesTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,14 +91,19 @@
             // TableLayoutPanelChild
             // 
             resources.ApplyResources(this.TableLayoutPanelChild, "TableLayoutPanelChild");
-            this.TableLayoutPanelChild.Controls.Add(this.weekdayParsingControl1, 0, 0);
-            this.TableLayoutPanelChild.Controls.Add(this.seasonsControl1, 1, 0);
+            this.TableLayoutPanelChild.Controls.Add(this.WeekdayParsingControl, 0, 0);
+            this.TableLayoutPanelChild.Controls.Add(this.SeasonsControl, 1, 0);
             this.TableLayoutPanelChild.Name = "TableLayoutPanelChild";
             // 
-            // weekdayParsingControl1
+            // WeekdayParsingControl
             // 
-            resources.ApplyResources(this.weekdayParsingControl1, "weekdayParsingControl1");
-            this.weekdayParsingControl1.Name = "weekdayParsingControl1";
+            resources.ApplyResources(this.WeekdayParsingControl, "WeekdayParsingControl");
+            this.WeekdayParsingControl.Name = "WeekdayParsingControl";
+            // 
+            // SeasonsControl
+            // 
+            resources.ApplyResources(this.SeasonsControl, "SeasonsControl");
+            this.SeasonsControl.Name = "SeasonsControl";
             // 
             // allEnumerationsControl1
             // 
@@ -131,7 +121,7 @@
             // 
             resources.ApplyResources(this.TableLayoutPanelClasses, "TableLayoutPanelClasses");
             this.TableLayoutPanelClasses.Controls.Add(this.FilmGroupBox, 1, 0);
-            this.TableLayoutPanelClasses.Controls.Add(this.RectanglesGroupBox, 0, 0);
+            this.TableLayoutPanelClasses.Controls.Add(this.RectanglesControl, 0, 0);
             this.TableLayoutPanelClasses.Name = "TableLayoutPanelClasses";
             // 
             // FilmGroupBox
@@ -221,122 +211,22 @@
             this.FilmsListBox.Name = "FilmsListBox";
             this.FilmsListBox.SelectedIndexChanged += new System.EventHandler(this.FilmsListBox_SelectedIndexChanged_1);
             // 
-            // RectanglesGroupBox
-            // 
-            this.RectanglesGroupBox.Controls.Add(this.IDlabel);
-            this.RectanglesGroupBox.Controls.Add(this.RectIDTextBox);
-            this.RectanglesGroupBox.Controls.Add(this.Ylabel);
-            this.RectanglesGroupBox.Controls.Add(this.Xlabel);
-            this.RectanglesGroupBox.Controls.Add(this.RectYTextBox);
-            this.RectanglesGroupBox.Controls.Add(this.RectXTextBox);
-            this.RectanglesGroupBox.Controls.Add(this.FindMaxWidthButton);
-            this.RectanglesGroupBox.Controls.Add(this.ColorLabel);
-            this.RectanglesGroupBox.Controls.Add(this.LengthLabel);
-            this.RectanglesGroupBox.Controls.Add(this.RectWidthLabel);
-            this.RectanglesGroupBox.Controls.Add(this.RectColorTextBox);
-            this.RectanglesGroupBox.Controls.Add(this.RectLengthTextBox);
-            this.RectanglesGroupBox.Controls.Add(this.RectWidthTextBox);
-            this.RectanglesGroupBox.Controls.Add(this.RectanglesListBox);
-            resources.ApplyResources(this.RectanglesGroupBox, "RectanglesGroupBox");
-            this.RectanglesGroupBox.Name = "RectanglesGroupBox";
-            this.RectanglesGroupBox.TabStop = false;
-            // 
-            // IDlabel
-            // 
-            resources.ApplyResources(this.IDlabel, "IDlabel");
-            this.IDlabel.Name = "IDlabel";
-            // 
-            // RectIDTextBox
-            // 
-            resources.ApplyResources(this.RectIDTextBox, "RectIDTextBox");
-            this.RectIDTextBox.Name = "RectIDTextBox";
-            this.RectIDTextBox.ReadOnly = true;
-            // 
-            // Ylabel
-            // 
-            resources.ApplyResources(this.Ylabel, "Ylabel");
-            this.Ylabel.Name = "Ylabel";
-            // 
-            // Xlabel
-            // 
-            resources.ApplyResources(this.Xlabel, "Xlabel");
-            this.Xlabel.Name = "Xlabel";
-            // 
-            // RectYTextBox
-            // 
-            resources.ApplyResources(this.RectYTextBox, "RectYTextBox");
-            this.RectYTextBox.Name = "RectYTextBox";
-            this.RectYTextBox.ReadOnly = true;
-            // 
-            // RectXTextBox
-            // 
-            resources.ApplyResources(this.RectXTextBox, "RectXTextBox");
-            this.RectXTextBox.Name = "RectXTextBox";
-            this.RectXTextBox.ReadOnly = true;
-            // 
-            // FindMaxWidthButton
-            // 
-            resources.ApplyResources(this.FindMaxWidthButton, "FindMaxWidthButton");
-            this.FindMaxWidthButton.Name = "FindMaxWidthButton";
-            this.FindMaxWidthButton.UseVisualStyleBackColor = true;
-            this.FindMaxWidthButton.Click += new System.EventHandler(this.FindMaxWidthButton_Click);
-            // 
-            // ColorLabel
-            // 
-            resources.ApplyResources(this.ColorLabel, "ColorLabel");
-            this.ColorLabel.Name = "ColorLabel";
-            // 
-            // LengthLabel
-            // 
-            resources.ApplyResources(this.LengthLabel, "LengthLabel");
-            this.LengthLabel.Name = "LengthLabel";
-            // 
-            // RectWidthLabel
-            // 
-            resources.ApplyResources(this.RectWidthLabel, "RectWidthLabel");
-            this.RectWidthLabel.Name = "RectWidthLabel";
-            // 
-            // RectColorTextBox
-            // 
-            resources.ApplyResources(this.RectColorTextBox, "RectColorTextBox");
-            this.RectColorTextBox.Name = "RectColorTextBox";
-            this.RectColorTextBox.TextChanged += new System.EventHandler(this.RectColorTextBox_TextChanged);
-            // 
-            // RectLengthTextBox
-            // 
-            resources.ApplyResources(this.RectLengthTextBox, "RectLengthTextBox");
-            this.RectLengthTextBox.Name = "RectLengthTextBox";
-            this.RectLengthTextBox.TextChanged += new System.EventHandler(this.RectLengthTextBox_TextChanged);
-            // 
-            // RectWidthTextBox
-            // 
-            resources.ApplyResources(this.RectWidthTextBox, "RectWidthTextBox");
-            this.RectWidthTextBox.Name = "RectWidthTextBox";
-            this.RectWidthTextBox.TextChanged += new System.EventHandler(this.RectWidthTextBox_TextChanged);
-            // 
-            // RectanglesListBox
-            // 
-            this.RectanglesListBox.FormattingEnabled = true;
-            resources.ApplyResources(this.RectanglesListBox, "RectanglesListBox");
-            this.RectanglesListBox.Name = "RectanglesListBox";
-            this.RectanglesListBox.SelectedIndexChanged += new System.EventHandler(this.RectanglesListBox_SelectedIndexChanged);
-            // 
             // RectanglesTabPage
             // 
-            this.RectanglesTabPage.Controls.Add(this.rectanglesCollisionControl1);
+            this.RectanglesTabPage.Controls.Add(this.RectanglesCollisionControl);
             resources.ApplyResources(this.RectanglesTabPage, "RectanglesTabPage");
             this.RectanglesTabPage.Name = "RectanglesTabPage";
             this.RectanglesTabPage.UseVisualStyleBackColor = true;
             // 
-            // rectanglesCollisionControl1
+            // RectanglesCollisionControl
             // 
-            resources.ApplyResources(this.rectanglesCollisionControl1, "rectanglesCollisionControl1");
-            this.rectanglesCollisionControl1.Name = "rectanglesCollisionControl1";
+            resources.ApplyResources(this.RectanglesCollisionControl, "RectanglesCollisionControl");
+            this.RectanglesCollisionControl.Name = "RectanglesCollisionControl";
             // 
-            // seasonsControl1
+            // RectanglesControl
             // 
-            resources.ApplyResources(this.seasonsControl1, "seasonsControl1");
-            this.seasonsControl1.Name = "seasonsControl1";
+            resources.ApplyResources(this.RectanglesControl, "RectanglesControl");
+            this.RectanglesControl.Name = "RectanglesControl";
             // 
             // MainForm
             // 
@@ -352,8 +242,6 @@
             this.TableLayoutPanelClasses.ResumeLayout(false);
             this.FilmGroupBox.ResumeLayout(false);
             this.FilmGroupBox.PerformLayout();
-            this.RectanglesGroupBox.ResumeLayout(false);
-            this.RectanglesGroupBox.PerformLayout();
             this.RectanglesTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -366,15 +254,6 @@
         private TableLayoutPanel TableLayoutPanel;
         private TableLayoutPanel TableLayoutPanelChild;
         private TabPage ClassesTabPage;
-        private GroupBox RectanglesGroupBox;
-        private Button FindMaxWidthButton;
-        private Label ColorLabel;
-        private Label LengthLabel;
-        private Label RectWidthLabel;
-        private TextBox RectColorTextBox;
-        private TextBox RectLengthTextBox;
-        private TextBox RectWidthTextBox;
-        private ListBox RectanglesListBox;
         private TableLayoutPanel TableLayoutPanelClasses;
         private GroupBox FilmGroupBox;
         private Label RatingLabel;
@@ -389,16 +268,11 @@
         private TextBox FilmDurationTextBox;
         private TextBox FilmNameTextBox;
         private ListBox FilmsListBox;
-        private Label Ylabel;
-        private Label Xlabel;
-        private TextBox RectYTextBox;
-        private TextBox RectXTextBox;
-        private Label IDlabel;
-        private TextBox RectIDTextBox;
         private TabPage RectanglesTabPage;
-        private Panels.RectanglesCollisionControl rectanglesCollisionControl1;
+        private Panels.RectanglesCollisionControl RectanglesCollisionControl;
         private Panels.AllEnumerationsControl allEnumerationsControl1;
-        private Panels.WeekdayParsingControl weekdayParsingControl1;
-        private Panels.SeasonsControl seasonsControl1;
+        private Panels.WeekdayParsingControl WeekdayParsingControl;
+        private Panels.SeasonsControl SeasonsControl;
+        private Panels.RectanglesControl RectanglesControl;
     }
 }
