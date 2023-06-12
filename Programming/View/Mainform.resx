@@ -232,345 +232,6 @@
   <data name="TableLayoutPanelClasses.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="FilmGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="RatingLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RatingLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 200</value>
-  </data>
-  <data name="RatingLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 15</value>
-  </data>
-  <data name="RatingLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="RatingLabel.Text" xml:space="preserve">
-    <value>Rating</value>
-  </data>
-  <data name="&gt;&gt;RatingLabel.Name" xml:space="preserve">
-    <value>RatingLabel</value>
-  </data>
-  <data name="&gt;&gt;RatingLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RatingLabel.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;RatingLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GenreLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="GenreLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 154</value>
-  </data>
-  <data name="GenreLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 15</value>
-  </data>
-  <data name="GenreLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="GenreLabel.Text" xml:space="preserve">
-    <value>Genre</value>
-  </data>
-  <data name="&gt;&gt;GenreLabel.Name" xml:space="preserve">
-    <value>GenreLabel</value>
-  </data>
-  <data name="&gt;&gt;GenreLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GenreLabel.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;GenreLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="YearLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="YearLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 110</value>
-  </data>
-  <data name="YearLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 15</value>
-  </data>
-  <data name="YearLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="YearLabel.Text" xml:space="preserve">
-    <value>Year</value>
-  </data>
-  <data name="&gt;&gt;YearLabel.Name" xml:space="preserve">
-    <value>YearLabel</value>
-  </data>
-  <data name="&gt;&gt;YearLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;YearLabel.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;YearLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="DurationLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DurationLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 62</value>
-  </data>
-  <data name="DurationLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 15</value>
-  </data>
-  <data name="DurationLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="DurationLabel.Text" xml:space="preserve">
-    <value>Duration</value>
-  </data>
-  <data name="&gt;&gt;DurationLabel.Name" xml:space="preserve">
-    <value>DurationLabel</value>
-  </data>
-  <data name="&gt;&gt;DurationLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DurationLabel.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;DurationLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="filmNameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="filmNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 18</value>
-  </data>
-  <data name="filmNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 15</value>
-  </data>
-  <data name="filmNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="filmNameLabel.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="&gt;&gt;filmNameLabel.Name" xml:space="preserve">
-    <value>filmNameLabel</value>
-  </data>
-  <data name="&gt;&gt;filmNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;filmNameLabel.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;filmNameLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="FindMaxFilmRatingButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 265</value>
-  </data>
-  <data name="FindMaxFilmRatingButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="FindMaxFilmRatingButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
-  </data>
-  <data name="FindMaxFilmRatingButton.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="FindMaxFilmRatingButton.Text" xml:space="preserve">
-    <value>Find</value>
-  </data>
-  <data name="&gt;&gt;FindMaxFilmRatingButton.Name" xml:space="preserve">
-    <value>FindMaxFilmRatingButton</value>
-  </data>
-  <data name="&gt;&gt;FindMaxFilmRatingButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FindMaxFilmRatingButton.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;FindMaxFilmRatingButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="FilmRatingTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 216</value>
-  </data>
-  <data name="FilmRatingTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="FilmRatingTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 23</value>
-  </data>
-  <data name="FilmRatingTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;FilmRatingTextBox.Name" xml:space="preserve">
-    <value>FilmRatingTextBox</value>
-  </data>
-  <data name="&gt;&gt;FilmRatingTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilmRatingTextBox.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;FilmRatingTextBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="FilmGenreTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 171</value>
-  </data>
-  <data name="FilmGenreTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="FilmGenreTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 23</value>
-  </data>
-  <data name="FilmGenreTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;FilmGenreTextBox.Name" xml:space="preserve">
-    <value>FilmGenreTextBox</value>
-  </data>
-  <data name="&gt;&gt;FilmGenreTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilmGenreTextBox.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;FilmGenreTextBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="FilmYearTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 127</value>
-  </data>
-  <data name="FilmYearTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="FilmYearTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 23</value>
-  </data>
-  <data name="FilmYearTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;FilmYearTextBox.Name" xml:space="preserve">
-    <value>FilmYearTextBox</value>
-  </data>
-  <data name="&gt;&gt;FilmYearTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilmYearTextBox.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;FilmYearTextBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="FilmDurationTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 79</value>
-  </data>
-  <data name="FilmDurationTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="FilmDurationTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 23</value>
-  </data>
-  <data name="FilmDurationTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;FilmDurationTextBox.Name" xml:space="preserve">
-    <value>FilmDurationTextBox</value>
-  </data>
-  <data name="&gt;&gt;FilmDurationTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilmDurationTextBox.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;FilmDurationTextBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="FilmNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 35</value>
-  </data>
-  <data name="FilmNameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="FilmNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 23</value>
-  </data>
-  <data name="FilmNameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;FilmNameTextBox.Name" xml:space="preserve">
-    <value>FilmNameTextBox</value>
-  </data>
-  <data name="&gt;&gt;FilmNameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilmNameTextBox.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;FilmNameTextBox.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="FilmsListBox.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="FilmsListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="FilmsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 18</value>
-  </data>
-  <data name="FilmsListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="FilmsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 269</value>
-  </data>
-  <data name="FilmsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;FilmsListBox.Name" xml:space="preserve">
-    <value>FilmsListBox</value>
-  </data>
-  <data name="&gt;&gt;FilmsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilmsListBox.Parent" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;FilmsListBox.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="FilmGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 3</value>
-  </data>
-  <data name="FilmGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>332, 433</value>
-  </data>
-  <data name="FilmGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="FilmGroupBox.Text" xml:space="preserve">
-    <value>Films</value>
-  </data>
-  <data name="&gt;&gt;FilmGroupBox.Name" xml:space="preserve">
-    <value>FilmGroupBox</value>
-  </data>
-  <data name="&gt;&gt;FilmGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilmGroupBox.Parent" xml:space="preserve">
-    <value>TableLayoutPanelClasses</value>
-  </data>
-  <data name="&gt;&gt;FilmGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="RectanglesControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -593,6 +254,30 @@
     <value>TableLayoutPanelClasses</value>
   </data>
   <data name="&gt;&gt;RectanglesControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="MoviesControls.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="MoviesControls.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 3</value>
+  </data>
+  <data name="MoviesControls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>332, 433</value>
+  </data>
+  <data name="MoviesControls.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;MoviesControls.Name" xml:space="preserve">
+    <value>MoviesControls</value>
+  </data>
+  <data name="&gt;&gt;MoviesControls.Type" xml:space="preserve">
+    <value>Programming.View.Panels.MoviesControls, Programming, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;MoviesControls.Parent" xml:space="preserve">
+    <value>TableLayoutPanelClasses</value>
+  </data>
+  <data name="&gt;&gt;MoviesControls.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="TableLayoutPanelClasses.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -623,7 +308,7 @@
     <value>0</value>
   </data>
   <data name="TableLayoutPanelClasses.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FilmGroupBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="RectanglesControl" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="RectanglesControl" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="MoviesControls" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="ClassesTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
