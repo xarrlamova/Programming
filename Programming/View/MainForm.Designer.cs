@@ -42,13 +42,6 @@
             this.SeasonComboBox = new System.Windows.Forms.ComboBox();
             this.GoButton = new System.Windows.Forms.Button();
             this.ChooseSeasonLabel = new System.Windows.Forms.Label();
-            this.EnumerationsGroupBox = new System.Windows.Forms.GroupBox();
-            this.ValueIntTextBox = new System.Windows.Forms.TextBox();
-            this.IntValueLabel = new System.Windows.Forms.Label();
-            this.ChooseValueLabel = new System.Windows.Forms.Label();
-            this.EnumValuesListBox = new System.Windows.Forms.ListBox();
-            this.ChooseEnumerationLabel = new System.Windows.Forms.Label();
-            this.AllEnumsListBox = new System.Windows.Forms.ListBox();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
             this.TableLayoutPanelClasses = new System.Windows.Forms.TableLayoutPanel();
             this.FilmGroupBox = new System.Windows.Forms.GroupBox();
@@ -81,13 +74,13 @@
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
             this.RectanglesTabPage = new System.Windows.Forms.TabPage();
             this.rectanglesCollisionControl1 = new Programming.View.Panels.RectanglesCollisionControl();
+            this.allEnumerationsControl1 = new Programming.View.Panels.AllEnumerationsControl();
             this.EnumsTabControl.SuspendLayout();
             this.EnumsTabPage.SuspendLayout();
             this.TableLayoutPanel.SuspendLayout();
             this.TableLayoutPanelChild.SuspendLayout();
             this.WeekdayParsingGroupBox.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
-            this.EnumerationsGroupBox.SuspendLayout();
             this.ClassesTabPage.SuspendLayout();
             this.TableLayoutPanelClasses.SuspendLayout();
             this.FilmGroupBox.SuspendLayout();
@@ -116,7 +109,7 @@
             // 
             resources.ApplyResources(this.TableLayoutPanel, "TableLayoutPanel");
             this.TableLayoutPanel.Controls.Add(this.TableLayoutPanelChild, 0, 1);
-            this.TableLayoutPanel.Controls.Add(this.EnumerationsGroupBox, 0, 0);
+            this.TableLayoutPanel.Controls.Add(this.allEnumerationsControl1, 0, 0);
             this.TableLayoutPanel.Name = "TableLayoutPanel";
             // 
             // TableLayoutPanelChild
@@ -186,53 +179,6 @@
             // 
             resources.ApplyResources(this.ChooseSeasonLabel, "ChooseSeasonLabel");
             this.ChooseSeasonLabel.Name = "ChooseSeasonLabel";
-            // 
-            // EnumerationsGroupBox
-            // 
-            this.EnumerationsGroupBox.Controls.Add(this.ValueIntTextBox);
-            this.EnumerationsGroupBox.Controls.Add(this.IntValueLabel);
-            this.EnumerationsGroupBox.Controls.Add(this.ChooseValueLabel);
-            this.EnumerationsGroupBox.Controls.Add(this.EnumValuesListBox);
-            this.EnumerationsGroupBox.Controls.Add(this.ChooseEnumerationLabel);
-            this.EnumerationsGroupBox.Controls.Add(this.AllEnumsListBox);
-            resources.ApplyResources(this.EnumerationsGroupBox, "EnumerationsGroupBox");
-            this.EnumerationsGroupBox.Name = "EnumerationsGroupBox";
-            this.EnumerationsGroupBox.TabStop = false;
-            // 
-            // ValueIntTextBox
-            // 
-            resources.ApplyResources(this.ValueIntTextBox, "ValueIntTextBox");
-            this.ValueIntTextBox.Name = "ValueIntTextBox";
-            this.ValueIntTextBox.TextChanged += new System.EventHandler(this.ValueIntTextBox_TextChanged);
-            // 
-            // IntValueLabel
-            // 
-            resources.ApplyResources(this.IntValueLabel, "IntValueLabel");
-            this.IntValueLabel.Name = "IntValueLabel";
-            // 
-            // ChooseValueLabel
-            // 
-            resources.ApplyResources(this.ChooseValueLabel, "ChooseValueLabel");
-            this.ChooseValueLabel.Name = "ChooseValueLabel";
-            // 
-            // EnumValuesListBox
-            // 
-            resources.ApplyResources(this.EnumValuesListBox, "EnumValuesListBox");
-            this.EnumValuesListBox.FormattingEnabled = true;
-            this.EnumValuesListBox.Name = "EnumValuesListBox";
-            this.EnumValuesListBox.SelectedIndexChanged += new System.EventHandler(this.EnumValuesListBox_SelectedIndexChanged);
-            // 
-            // ChooseEnumerationLabel
-            // 
-            resources.ApplyResources(this.ChooseEnumerationLabel, "ChooseEnumerationLabel");
-            this.ChooseEnumerationLabel.Name = "ChooseEnumerationLabel";
-            // 
-            // AllEnumsListBox
-            // 
-            resources.ApplyResources(this.AllEnumsListBox, "AllEnumsListBox");
-            this.AllEnumsListBox.FormattingEnabled = true;
-            this.AllEnumsListBox.Name = "AllEnumsListBox";
-            this.AllEnumsListBox.SelectedIndexChanged += new System.EventHandler(this.AllEnumsListBox_SelectedIndexChanged);
             // 
             // ClassesTabPage
             // 
@@ -447,13 +393,17 @@
             resources.ApplyResources(this.rectanglesCollisionControl1, "rectanglesCollisionControl1");
             this.rectanglesCollisionControl1.Name = "rectanglesCollisionControl1";
             // 
+            // allEnumerationsControl1
+            // 
+            resources.ApplyResources(this.allEnumerationsControl1, "allEnumerationsControl1");
+            this.allEnumerationsControl1.Name = "allEnumerationsControl1";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.EnumsTabControl);
             this.Name = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.EnumsTabControl.ResumeLayout(false);
             this.EnumsTabPage.ResumeLayout(false);
             this.TableLayoutPanel.ResumeLayout(false);
@@ -462,8 +412,6 @@
             this.WeekdayParsingGroupBox.PerformLayout();
             this.SeasonHandleGroupBox.ResumeLayout(false);
             this.SeasonHandleGroupBox.PerformLayout();
-            this.EnumerationsGroupBox.ResumeLayout(false);
-            this.EnumerationsGroupBox.PerformLayout();
             this.ClassesTabPage.ResumeLayout(false);
             this.TableLayoutPanelClasses.ResumeLayout(false);
             this.FilmGroupBox.ResumeLayout(false);
@@ -481,13 +429,6 @@
         private TabPage EnumsTabPage;
         private TableLayoutPanel TableLayoutPanel;
         private TableLayoutPanel TableLayoutPanelChild;
-        private GroupBox EnumerationsGroupBox;
-        private Label ChooseEnumerationLabel;
-        private ListBox AllEnumsListBox;
-        private Label IntValueLabel;
-        private Label ChooseValueLabel;
-        private ListBox EnumValuesListBox;
-        private TextBox ValueIntTextBox;
         private GroupBox WeekdayParsingGroupBox;
         private GroupBox SeasonHandleGroupBox;
         private TextBox ParsingValueTextBox;
@@ -529,5 +470,6 @@
         private TextBox RectIDTextBox;
         private TabPage RectanglesTabPage;
         private Panels.RectanglesCollisionControl rectanglesCollisionControl1;
+        private Panels.AllEnumerationsControl allEnumerationsControl1;
     }
 }

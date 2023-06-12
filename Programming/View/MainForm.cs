@@ -40,8 +40,7 @@ namespace Programming.View
             string[] filmNames = Enum.GetNames(typeof(FilmNames));
             string[] filmGenres = Enum.GetNames(typeof(Genre));
 
-            AllEnumsListBox.Items.AddRange(enums); //передаем массив со значениями в AllEnumsListBox
-            AllEnumsListBox.DisplayMember = nameof(Type.Name);
+            
 
             Random rand = new Random();
             for(int i = 0; i < _rectangles.Length; i++)
@@ -59,43 +58,6 @@ namespace Programming.View
                 FilmsListBox.Items.Add($"Film {i + 1}");
             }
         }
-        
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            var selectedEnum = (Type)AllEnumsListBox.Items[0];
-            //выбранное значение по умолчанию - 0
-            foreach (var enumValue in Enum.GetValues(selectedEnum))
-            {
-                EnumValuesListBox.Items.Add(enumValue);
-            }
-            //добавляем значения в EnumValuesListBox
-
-            SeasonComboBox.Items.AddRange(Enum.GetNames(typeof(Season)));
-        }
-        private void AllEnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var selectedEnum = (Type)AllEnumsListBox.SelectedItem;
-            //выбранное значение - то, что кликнул пользователь
-
-            var enumValues = Enum.GetValues(selectedEnum);
-            //создаем массив enumValues со значениями перечисления
-            EnumValuesListBox.Items.Clear();
-            //Очищаем EnumValuesListBox от прошлых перечислений
-            foreach (var enumValue in enumValues)
-            {
-                EnumValuesListBox.Items.Add(enumValue);
-            }
-            //добавляем значения перечислений в EnumValuesListBox
-        }
-
-        private void EnumValuesListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var selectedEnum = (int)EnumValuesListBox.SelectedItem;
-            //выбранное значение - то, что кликнул пользователь
-            ValueIntTextBox.Text = selectedEnum.ToString();
-            //заносим числовое значение выбранного во втором списке в ValueTextBox
-        }
-
 
         private void ParseButton_Click(object sender, EventArgs e)
         {

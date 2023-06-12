@@ -92,6 +92,7 @@
             this.EnumValuesListBox.Name = "EnumValuesListBox";
             this.EnumValuesListBox.Size = new System.Drawing.Size(136, 304);
             this.EnumValuesListBox.TabIndex = 2;
+            this.EnumValuesListBox.SelectedIndexChanged += new System.EventHandler(this.EnumValuesListBox_SelectedIndexChanged);
             // 
             // ChooseEnumerationLabel
             // 
