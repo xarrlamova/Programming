@@ -11,6 +11,10 @@ using System.Windows.Forms;
 
 namespace Programming.View.Panels
 {
+    /// <summary>
+    /// Предоставляет методы для проверки наличия в перечислении 
+    /// с днями недели вводимой строки в текстовом поле. 
+    /// </summary>
     public partial class WeekdayParsingControl : UserControl
     {
         public WeekdayParsingControl()
@@ -18,6 +22,9 @@ namespace Programming.View.Panels
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Проверяет вводимое значение на его наличие среди перечисления дней недели
+        /// </summary>
         private void ParseButton_Click(object sender, EventArgs e)
         {
             if (ParsingValueTextBox.Text == "") return;

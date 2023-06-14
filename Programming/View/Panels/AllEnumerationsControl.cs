@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace Programming.View.Panels
 {
+    /// <summary>
+    ///  Предоставляет методы для вывода данных в листбоксы и текстбокс. 
+    /// </summary>
     public partial class AllEnumerationsControl : UserControl
     {
         public AllEnumerationsControl()
@@ -40,7 +43,9 @@ namespace Programming.View.Panels
             }
             //добавляем значения в EnumValuesListBox
         }
-
+        /// <summary>
+        /// Заполняет один листбокс в зависимости от выбранного значения в другом.
+        /// </summary>
         private void AllEnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedEnum = (Type)AllEnumsListBox.SelectedItem;
@@ -56,7 +61,9 @@ namespace Programming.View.Panels
             }
             //добавляем значения перечислений в EnumValuesListBox
         }
-
+        /// <summary>
+        /// Выводит индекс выбранного элемента перечисления в текстовое поле. 
+        /// </summary>
         private void EnumValuesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedEnum = (int)EnumValuesListBox.SelectedItem;

@@ -7,15 +7,39 @@ using System.Threading.Tasks;
 
 namespace Programming.Model.Classes.Geometry
 {
+    /// <summary>
+    /// Описывает прямоугольник, его длину, ширину, цвет, Id, координаты (х,у) его центра.
+    /// </summary>
     public class Rectangle
     {
+        /// <summary>
+        /// Длина.
+        /// </summary>
         private double _length;
+        /// <summary>
+        /// Ширина.
+        /// </summary>
         private double _width;
+        /// <summary>
+        /// Возвращает Id прямоугольника.
+        /// </summary>
         public int Id { get; }
+        /// <summary>
+        /// Возвращает и задает координаты центра прямоугольника.
+        /// </summary>
         public Point2D Centre { get; set; }
+        /// <summary>
+        /// Цвет.
+        /// </summary>
         public string Color { get; set; }
 
+        /// <summary>
+        /// Количество созданных прямоугольников.
+        /// </summary>
         private static int _allRectanglesCount;
+        /// <summary>
+        /// Возвращает количество созданных прямоугольников.
+        /// </summary>
         public static int AllRectanglesCount
         {
             get => _allRectanglesCount;
@@ -25,7 +49,9 @@ namespace Programming.Model.Classes.Geometry
             }
         }
 
-
+        /// <summary>
+        /// Возвращает и задает длину прямоугольника. Должна быть положительной.
+        /// </summary>
         public double Length
         {
             get
@@ -39,6 +65,9 @@ namespace Programming.Model.Classes.Geometry
             }
         }
 
+        /// <summary>
+        /// Возвращает и задает ширину прямоугольника. Должна быть положительной.
+        /// </summary>
         public double Width
         {
             get
@@ -52,13 +81,22 @@ namespace Programming.Model.Classes.Geometry
             }
         }
 
-
+        /// <summary>
+        /// Создает объект класса <see cref="Rectangle"/>
+        /// </summary>
         public Rectangle()
         {
 
         }
 
-
+        /// <summary>
+        /// Создает объект класса <see cref="Rectangle"/>
+        /// </summary>
+        /// <param name="length">Длина прямоугольника. Должна быть положительной.</param>
+        /// <param name="width">Ширина прямоугольника. Должна быть положительной.</param>
+        /// <param name="color">Цвет прямоугольника.</param>
+        /// <param name="x">Координата точки х - середины прямоугольника. Должна быть положительной.</param>
+        /// <param name="y">Координата точки у - середины прямоугольника. Должна быть положительной.</param>
         public Rectangle(double length, double width, string color, int x, int y)
         {
             Length = length;

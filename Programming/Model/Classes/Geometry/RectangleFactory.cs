@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Programming.Model.Classes.Geometry
 {
-    internal class RectangleFactory
+    /// <summary>
+    /// Хранит метод для создания прямоугольников.  
+    /// </summary>
+    public class RectangleFactory
     {
+        /// <summary>
+        /// Создает прямоугольник. 
+        /// </summary>
+        /// <param name="RectPanel">Размер канвы для ограничения координат центра прямоугольника.</param>
+        /// <returns>Возвращает прямоугольник.</returns>
         public Rectangle Randomize(Panel RectPanel)
         {
             Random _rand = new Random();

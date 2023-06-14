@@ -9,12 +9,27 @@ using System.Xml.Linq;
 
 namespace Programming.Model.Classes
 {
+    /// <summary>
+    /// Хранит информацию о контакте (в телефонной книжке).
+    /// </summary>
     public class Contact
     {
+        /// <summary>
+        /// Имя.
+        /// </summary>
         private string _name;
+        /// <summary>
+        /// Фамилия.
+        /// </summary>
         private string _surname;
+        /// <summary>
+        /// Номер.
+        /// </summary>
         private string _number;
 
+        /// <summary>
+        /// Возвращает и задает имя контакта. Должна состоять только из латинских букв.
+        /// </summary>
         public string Name
         {
             get => _name;
@@ -24,6 +39,9 @@ namespace Programming.Model.Classes
                 _name = value;
             }
         }
+        /// <summary>
+        /// Возвращает и задает фамилию контакта. Должна состоять только из латинских букв.
+        /// </summary>
         public string Surname
         {
             get => _surname;
@@ -34,6 +52,12 @@ namespace Programming.Model.Classes
             }
         }
 
+        /// <summary>
+        /// Проверяет, состоит ли строка только из латинских букв.
+        /// </summary>
+        /// <param name="value">Проверяемая строка.</param>
+        /// <param name="name">Название свойства.</param>
+        /// <exception cref="ArgumentException">Исключение - строка должно состоять только из латинских букв.</exception>
         private void AssertStringContainsOnlyLetters(string value, string name)
         {
             StackTrace stacktrace = new StackTrace();
@@ -44,7 +68,11 @@ namespace Programming.Model.Classes
             }
 
         }
-
+        
+        /// <summary>
+        /// Возвращает и задает строку, содержащую номер контакта. Должна начинаться с +7/7/8,
+        /// состоять из десяти символов и содержать только цифры от 0-9.
+        /// </summary>
         public string Number
         {
             get { return _number; }
@@ -59,10 +87,19 @@ namespace Programming.Model.Classes
             }
         }
 
-
+        /// <summary>
+        /// Создает объект класса <see cref="Contact"/>
+        /// </summary>
         public Contact()
         {
         }
+        /// <summary>
+        /// Создает объект класса <see cref="Contact"/>
+        /// </summary>
+        /// <param name="name">Имя. Должно состоять из латинских букв.</param>
+        /// <param name="surname">Фамилия. Должна состоять из латинских букв.</param>
+        /// <param name="number">Номер контакта. Должна начинаться с +7/7/8,
+        /// состоять из десяти символов и содержать только цифры от 0-9.</param>
         public Contact(string name, string surname, string number)
         {
             Name = name;
