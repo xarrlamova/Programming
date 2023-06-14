@@ -15,18 +15,22 @@ namespace Programming.Model.Classes
         /// Возвращает и задает название фильма.
         /// </summary>
         public string Title { get; set; }
+
         /// <summary>
         /// Длительность фильма в минутах.
         /// </summary>
         private int _durationInMinutes;
+
         /// <summary>
         /// Год релиза фильма.
         /// </summary>
         private int _yearOfRelease;
+
         /// <summary>
         /// Возвращает и задает жанр фильма.
         /// </summary>
         public string Genre { get; set; }
+
         /// <summary>
         /// Рейтинг фильма.
         /// </summary>

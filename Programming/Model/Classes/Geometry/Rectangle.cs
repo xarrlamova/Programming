@@ -16,18 +16,22 @@ namespace Programming.Model.Classes.Geometry
         /// Длина.
         /// </summary>
         private double _length;
+
         /// <summary>
         /// Ширина.
         /// </summary>
         private double _width;
+
         /// <summary>
         /// Возвращает Id прямоугольника.
         /// </summary>
         public int Id { get; }
+
         /// <summary>
         /// Возвращает и задает координаты центра прямоугольника.
         /// </summary>
         public Point2D Centre { get; set; }
+
         /// <summary>
         /// Цвет.
         /// </summary>
@@ -37,6 +41,7 @@ namespace Programming.Model.Classes.Geometry
         /// Количество созданных прямоугольников.
         /// </summary>
         private static int _allRectanglesCount;
+
         /// <summary>
         /// Возвращает количество созданных прямоугольников.
         /// </summary>

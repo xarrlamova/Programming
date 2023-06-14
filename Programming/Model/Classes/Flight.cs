@@ -15,14 +15,17 @@ namespace Programming.Model.Classes
         /// Длительность полета в минутах.
         /// </summary>
         private int _flightTimeInMinutes;
+
         /// <summary>
         /// Возвращает и задает пункт назначения.
         /// </summary>
         public string DeparturePoint { get; set; }
+
         /// <summary>
         /// Возвращает и задает точку отправления. 
         /// </summary>
         public string Destination { get; set; }
+
         /// <summary>
         /// Возвращает и задает длительность полета в минутах. Должна быть положительной.
         /// </summary>
@@ -35,6 +38,7 @@ namespace Programming.Model.Classes
                 _flightTimeInMinutes = value;
             }
         }
+
         /// <summary>
         /// Создает объект класса <see cref="Flight"/>.
         /// </summary>
@@ -42,6 +46,7 @@ namespace Programming.Model.Classes
         {
 
         }
+
         /// <summary>
         /// Создает объект класса <see cref="Flight"/>. 
         /// </summary>

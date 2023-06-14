@@ -18,10 +18,12 @@ namespace Programming.Model.Classes
         /// Имя.
         /// </summary>
         private string _name;
+
         /// <summary>
         /// Фамилия.
         /// </summary>
         private string _surname;
+
         /// <summary>
         /// Номер.
         /// </summary>
@@ -63,7 +65,7 @@ namespace Programming.Model.Classes
             if (Regex.IsMatch(value, "^[a-zA-Z]*$") == false)
             {
                 throw new ArgumentException($"value in {name} " +
-                    $"is suposed to contain only letters");
+                    $"is supposed to contain only letters");
             }
 
         }

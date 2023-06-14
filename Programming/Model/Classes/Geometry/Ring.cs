@@ -15,14 +15,17 @@ namespace Programming.Model.Classes.Geometry
         /// Внутрений радиус.
         /// </summary>
         private double _innerRadius;
+
         /// <summary>
         /// Внешний радиус.
         /// </summary>
         private double _outerRadius;
+
         /// <summary>
         /// Возвращает и задает координаты центра кольца.
         /// </summary>
         public Point2D Centre { get; set; }
+
         /// <summary>
         /// Возвращает и задает внутренний радиус кольца. 
         /// Внутренний радиус не может быть больше внешнего. Должен быть положительным.

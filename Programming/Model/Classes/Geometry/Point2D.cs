@@ -15,6 +15,7 @@ namespace Programming.Model.Classes.Geometry
         /// Координата точки х.
         /// </summary>
         private int _x;
+
         /// <summary>
         /// Координата точки у.
         /// </summary>
