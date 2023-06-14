@@ -31,7 +31,7 @@ OutputBaseFilename=StudentsAppSetup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
-SetupIconFile="..\StudentsApp\StudentsAppNewIcon.ico"
+SetupIconFile="..\StudentsAppNewIcon.ico"
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -41,9 +41,9 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "..\StudentsApp\bin\Debug\net6.0-windows\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\StudentsApp\bin\Debug\net6.0-windows\*dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\StudentsApp\bin\Debug\net6.0-windows\StudentsApp.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\Debug\net6.0-windows\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\Debug\net6.0-windows\*dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\Debug\net6.0-windows\StudentsApp.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
