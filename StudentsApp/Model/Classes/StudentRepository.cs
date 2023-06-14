@@ -127,10 +127,10 @@ namespace StudentsApp.Model.Classes
         /// <returns>Возвращает строку.</returns>
         private static string CreateDto()
         {
-            var Dto = new Dto();
-            Dto.ID = 100000;
-            Dto.StudentsCollection = new List<Student>();
-            var dataString = JsonConvert.SerializeObject(Dto);
+            var _dto = new Dto();
+            _dto.ID = 100000;
+            _dto.StudentsCollection = new List<Student>();
+            var dataString = JsonConvert.SerializeObject(_dto);
             return dataString;
         }
     }
