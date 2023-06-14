@@ -6,18 +6,32 @@ using System.Threading.Tasks;
 
 namespace Programming.Model.Classes
 {
+    /// <summary>
+    /// Хранит данные о времени. 
+    /// </summary>
     public class Time
     {
+        /// <summary>
+        /// Часы.
+        /// </summary>
         private int _hours;
+
+        /// <summary>
+        /// Минуты. 
+        /// </summary>
         private int _minutes;
+
+        /// <summary>
+        /// Секунды.
+        /// </summary>
         private int _seconds;
 
+        /// <summary>
+        /// Возвращает и задает часы. Значение должно входить в диапазон от 0 до 24. 
+        /// </summary>
         public int Hours
         {
-            get
-            {
-                return _hours;
-            }
+            get => _hours;
             set
             {
                 Validator.AssertValueInRange(value, 0, 23, nameof(Hours));
@@ -25,12 +39,12 @@ namespace Programming.Model.Classes
             }
         }
 
+        /// <summary>
+        /// Возвращает и задает минуты. Значение должно входить в диапазон от 0 до 60. 
+        /// </summary>
         public int Minutes
         {
-            get
-            {
-                return _minutes;
-            }
+            get => _minutes;
             set
             {
                 Validator.AssertValueInRange(value, 0, 60, nameof(Minutes));
@@ -38,12 +52,12 @@ namespace Programming.Model.Classes
             }
         }
 
+        /// <summary>
+        /// Возвращает и задает секунды. Значение должно входить в диапазон от 0 до 60. 
+        /// </summary>
         public int Seconds
         {
-            get
-            {
-                return _seconds;
-            }
+            get => _seconds;
             set
             {
                 Validator.AssertValueInRange(value, 0, 60, nameof(Seconds));
@@ -51,11 +65,19 @@ namespace Programming.Model.Classes
             }
         }
 
+        /// <summary>
+        /// Создает объект класса <see cref="Time"/>. 
+        /// </summary>
         public Time()
         {
-
         }
 
+        /// <summary>
+        /// Создает объект класса <see cref="Time"/>.
+        /// </summary>
+        /// <param name="hours">Часы. Значение должно входить в диапазон от 0 до 24. </param>
+        /// <param name="minutes">Минуты. Значение должно входить в диапазон от 0 до 60. </param>
+        /// <param name="seconds">Секунды.  Значение должно входить в диапазон от 0 до 60. </param>
         public Time(int hours, int minutes, int seconds)
         {
             Hours = hours;

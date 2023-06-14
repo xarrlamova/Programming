@@ -11,11 +11,23 @@ using System.Windows.Forms;
 
 namespace Programming.View.Panels
 {
+    /// <summary>
+    /// Предоставляет методы для создания, удаления прямоугольников и их проверку на столкновения. 
+    /// </summary>
     public partial class RectanglesCollisionControl : UserControl
     {
+        /// <summary>
+        /// Объект типа <see cref="Model.Classes.Geometry.Rectangle"/>. 
+        /// </summary>
         private Model.Classes.Geometry.Rectangle _currentRectangle = new Model.Classes.Geometry.Rectangle();
 
+        /// <summary>
+        /// Список объектов типа <see cref="Model.Classes.Geometry.Rectangle"/>. 
+        /// </summary>
         private List<Model.Classes.Geometry.Rectangle> _rectangels = new List<Model.Classes.Geometry.Rectangle>();
+        /// <summary>
+        /// Список рисуемых прямоугольников.
+        /// </summary>
         private List<Panel> _rectanglePanels = new List<Panel>();
 
         public RectanglesCollisionControl()
@@ -23,6 +35,9 @@ namespace Programming.View.Panels
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Обновляет данные в текстовых полях при смене выбранного элемента.
+        /// </summary>
         private void RectInfoListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int number = RectInfoListBox.SelectedIndex;
@@ -36,6 +51,10 @@ namespace Programming.View.Panels
                 ClearRectangleInfo();
             }
         }
+
+        /// <summary>
+        /// Добавляет прямоугольник в список и на канву при нажатии на кнопку. 
+        /// </summary>
         private void AddRectButton_Click(object sender, EventArgs e)
         {
             int i = _rectangels.Count;
@@ -76,6 +95,9 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Проверяет и сохраняет значение текстового поля при его изменении. 
+        /// </summary>
         private void XTextBox_TextChanged(object sender, EventArgs e)
         {
             XTextBox.BackColor = System.Drawing.Color.White;
@@ -107,6 +129,9 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Проверяет и сохраняет значение текстового поля при его изменении. 
+        /// </summary>
         private void YTextBox_TextChanged(object sender, EventArgs e)
         {
             YTextBox.BackColor = System.Drawing.Color.White;
@@ -138,6 +163,9 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Проверяет и сохраняет значение текстового поля при его изменении. 
+        /// </summary>
         private void WidthTextBox_TextChanged(object sender, EventArgs e)
         {
             WidthTextBox.BackColor = System.Drawing.Color.White;
@@ -169,6 +197,9 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Проверяет и сохраняет значение текстового поля при его изменении. 
+        /// </summary>
         private void HeightTextBox_TextChanged(object sender, EventArgs e)
         {
             HeightTextBox.BackColor = System.Drawing.Color.White;
@@ -200,6 +231,10 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Ищет столкновения/пересечения прямоугольников. 
+        /// </summary>
+        /// <param name="_rectangels">Список прямоугольников. </param>
         private void FindCollisions(List<Model.Classes.Geometry.Rectangle> _rectangels)
         {
             var colidingPanelsColor = System.Drawing.Color.FromArgb(127, 255, 127, 127);
@@ -225,6 +260,10 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Вставляет данные в текстовые поля. 
+        /// </summary>
+        /// <param name="rectangle">Прямоугольник, данные которого будут вставляться в текстовые поля. </param>
         private void UpdateRectangleInfo(Model.Classes.Geometry.Rectangle rectangle)
         {
             XTextBox.Text = rectangle.Centre.X.ToString();
@@ -233,6 +272,10 @@ namespace Programming.View.Panels
             WidthTextBox.Text = rectangle.Length.ToString();
             HeightTextBox.Text = rectangle.Width.ToString();
         }
+
+        /// <summary>
+        /// Очищает текстовые поля.
+        /// </summary>
         private void ClearRectangleInfo()
         {
             HeightTextBox.Clear();

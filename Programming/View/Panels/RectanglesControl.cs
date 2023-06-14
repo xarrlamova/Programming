@@ -12,9 +12,19 @@ using System.Windows.Forms;
 
 namespace Programming.View.Panels
 {
+    /// <summary>
+    /// Предоставляет методы для получения информации о прямоугольниках 
+    /// и поиска прямоугольника с наибольшей шириной. 
+    /// </summary>
     public partial class RectanglesControl : UserControl
     {
+        /// <summary>
+        /// Объект типа <see cref="Model.Classes.Geometry.Rectangle"/>. 
+        /// </summary>
         private Model.Classes.Geometry.Rectangle _currentRectangle = new Model.Classes.Geometry.Rectangle();
+        /// <summary>
+        /// Массив объектов типа <see cref="Model.Classes.Geometry.Rectangle"/>. 
+        /// </summary>
         private Model.Classes.Geometry.Rectangle[] _rectangles = new Model.Classes.Geometry.Rectangle[5];
 
         public RectanglesControl()
@@ -34,7 +44,9 @@ namespace Programming.View.Panels
             
         }
 
-
+        /// <summary>
+        /// Обновляет текстовые поля при выборе прямоугольника.
+        /// </summary>
         private void RectanglesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int value = RectanglesListBox.SelectedIndex;
@@ -52,6 +64,9 @@ namespace Programming.View.Panels
             RectColorTextBox.TextChanged += RectColorTextBox_TextChanged;
         }
 
+        /// <summary>
+        /// Проверяет и сохраняет значение из текстового поля при его изменении.
+        /// </summary>
         private void RectWidthTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -66,6 +81,9 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Проверяет и сохраняет значение из текстового поля при его изменении.
+        /// </summary>
         private void RectLengthTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -80,16 +98,26 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Сохраняет значение из текстового поля при его изменении.
+        /// </summary>
         private void RectColorTextBox_TextChanged(object sender, EventArgs e)
         {
             _currentRectangle.Color = RectColorTextBox.Text;
         }
 
+        /// <summary>
+        /// Выбирает прямоугольник с максимальной шириной при нажатии на кнопку. 
+        /// </summary>
         private void FindMaxWidthButton_Click(object sender, EventArgs e)
         {
             RectanglesListBox.SelectedIndex = FindRectangleWithMaxWidth();
         }
 
+        /// <summary>
+        /// Ищет прямоугольник с максимальной шириной. 
+        /// </summary>
+        /// <returns>Возвращает индекс прямоугольника с максимальной шириной. </returns>
         private int FindRectangleWithMaxWidth()
         {
             double maxWidth = _rectangles[0].Width;

@@ -13,9 +13,19 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Programming.View.Panels
 {
+    /// <summary>
+    /// Предоставляет методы для получения информации о фильмах и 
+    /// поиска фильма с наибольшим рейтингом.
+    /// </summary>
     public partial class MoviesControls : UserControl
     {
+        /// <summary>
+        /// Массив объектов типа <see cref="Film"/>. 
+        /// </summary>
         private Film[] _films = new Film[5];
+        /// <summary>
+        /// Объект типа <see cref="Film"/>.
+        /// </summary>
         private Film _currentFilm = new Film();
 
         public MoviesControls()
@@ -34,6 +44,9 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Обновляет значения в текстовых полях при изменении выбранного объекта из списка. 
+        /// </summary>
         private void FilmsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int value = FilmsListBox.SelectedIndex;
@@ -50,11 +63,17 @@ namespace Programming.View.Panels
             FilmRatingTextBox.TextChanged += FilmRatingTextBox_TextChanged;
         }
 
+        /// <summary>
+        /// Сохраняет значение в текстовом поле при изменении.
+        /// </summary>
         private void FilmNameTextBox_TextChanged(object sender, EventArgs e)
         {
             _currentFilm.Title = FilmNameTextBox.Text;
         }
 
+        /// <summary>
+        /// Проверяет и сохраняет значение в текстовом поле при изменении.
+        /// </summary>
         private void FilmDurationTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -69,6 +88,9 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Проверяет и сохраняет значение в текстовом поле при изменении.
+        /// </summary>
         private void FilmYearTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -83,11 +105,17 @@ namespace Programming.View.Panels
             }
         }
 
+        /// <summary>
+        /// Сохраняет значение в текстовом поле при изменении.
+        /// </summary>
         private void FilmGenreTextBox_TextChanged(object sender, EventArgs e)
         {
             _currentFilm.Genre = FilmGenreTextBox.Text;
         }
 
+        /// <summary>
+        /// Проверяет и сохраняет значение в текстовом поле при изменении.
+        /// </summary>
         private void FilmRatingTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -101,12 +129,18 @@ namespace Programming.View.Panels
                 FilmRatingTextBox.BackColor = System.Drawing.Color.LightPink;
             }
         }
-
+        /// <summary>
+        /// Выбирает фильм из списка с максимальным рейтингом при нажатии на кнопку. 
+        /// </summary>
         private void FindMaxFilmRatingButton_Click(object sender, EventArgs e)
         {
             FilmsListBox.SelectedIndex = FindFilmWithMaxRating();
         }
 
+        /// <summary>
+        /// Ищет фильм с наивысшим рейтингом. 
+        /// </summary>
+        /// <returns>Возвращает индекс фильма с наивысшим рейтингом. </returns>
         private int FindFilmWithMaxRating()
         {
             double maxRating = _films[0].Rating;

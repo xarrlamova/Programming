@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Programming.Model.Classes.Geometry
 {
-    internal class RectangleFactory
+    /// <summary>
+    /// Возвращает рандомные значения параметров прямоугольника. Длину, ширину, цвет,
+    /// координаты (х,у) середины прямоугольника.
+    /// </summary>
+    public class RectangleFactory
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="RectPanel"></param>
+        /// <returns></returns>
         public Rectangle Randomize(Panel RectPanel)
         {
             Random _rand = new Random();
