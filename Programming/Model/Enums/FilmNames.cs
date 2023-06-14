@@ -3,7 +3,7 @@
     /// <summary>
     /// Перечисление с названиями фильмов.
     /// </summary>
-    enum FilmNames
+    public enum FilmNames
     {
         /// <summary>
         /// Внеклассные занятия.

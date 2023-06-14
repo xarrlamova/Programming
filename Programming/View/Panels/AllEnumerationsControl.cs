@@ -30,8 +30,6 @@ namespace Programming.View.Panels
                 typeof(Weekday)
            };
 
-            string[] colorNames = Enum.GetNames(typeof(Model.Enums.Color));
-
             AllEnumsListBox.Items.AddRange(enums); //передаем массив со значениями в AllEnumsListBox
             AllEnumsListBox.DisplayMember = nameof(Type.Name);
 

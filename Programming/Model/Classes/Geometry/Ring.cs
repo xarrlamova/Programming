@@ -14,11 +14,11 @@ namespace Programming.Model.Classes.Geometry
         /// <summary>
         /// Внутрений радиус.
         /// </summary>
-        private double _innerradius;
+        private double _innerRadius;
         /// <summary>
         /// Внешний радиус.
         /// </summary>
-        private double _outerradius;
+        private double _outerRadius;
         /// <summary>
         /// Возвращает и задает координаты центра кольца.
         /// </summary>
@@ -29,11 +29,11 @@ namespace Programming.Model.Classes.Geometry
         /// </summary>
         public double InnerRadius
         {
-            get => _innerradius;
+            get => _innerRadius;
             private set
             {
                 Validator.AssertValueInRange(value, 0, OuterRadius, nameof(InnerRadius));
-                _innerradius = value;
+                _innerRadius = value;
             }
         }
 
@@ -43,11 +43,11 @@ namespace Programming.Model.Classes.Geometry
         /// </summary>
         public double OuterRadius
         {
-            get => _outerradius;
+            get => _outerRadius;
             private set
             {
                 Validator.AssertValueInRange(value, InnerRadius, double.MaxValue, nameof(OuterRadius));
-                _outerradius = value;
+                _outerRadius = value;
             }
         }
         /// <summary>

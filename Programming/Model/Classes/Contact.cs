@@ -60,7 +60,6 @@ namespace Programming.Model.Classes
         /// <exception cref="ArgumentException">Исключение - строка должно состоять только из латинских букв.</exception>
         private void AssertStringContainsOnlyLetters(string value, string name)
         {
-            StackTrace stacktrace = new StackTrace();
             if (Regex.IsMatch(value, "^[a-zA-Z]*$") == false)
             {
                 throw new ArgumentException($"value in {name} " +
